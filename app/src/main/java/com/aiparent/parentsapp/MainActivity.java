@@ -15,10 +15,6 @@ import android.widget.ImageView;
 import  com.aiparent.parentsapp.view.ParallaxContainer;
 
 
-/**
- * @author zhongdaxia 2014-12-15
- */
-
 public class MainActivity extends Activity {
 
     ImageView iv_man;
@@ -30,10 +26,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**
-         * 动画支持11以上sdk,11以下默认不显示动画
-         * 若需要支持11以下动画,也可导入https://github.com/JakeWharton/NineOldAndroids
-         */
         if (android.os.Build.VERSION.SDK_INT > 10) {
             iv_man = (ImageView) findViewById(R.id.iv_man);
             parallaxContainer = (ParallaxContainer) findViewById(R.id.parallax_container);
