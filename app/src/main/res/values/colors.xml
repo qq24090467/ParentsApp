@@ -3,4 +3,20 @@
     <color name="transparent">#00000000</color>
     <color name="white">#ffffffff</color>
     <color name="base_shallow_black">#818181</color>
+    <color name="transparent2">#00000000</color>
+    <color name="text_link_color">#fff96650</color>
+    <color name="title_color">#ff505044</color>
+    <color name="new_back_color">#ffffff</color>
+    <item type="color" name="btn_normal_bg_pressed_color">@color/gray</item>
+    <color name="gray">#ff999999</color>
+    <color name="btn_link_text_color">#fff96650</color>
+    <color name="main_setting_content_text">#ff444444</color>
+    <color name="f9f6f4">#fff9f6f4</color>
+    <color name="main_setting_content_text2">#ff999999</color>
+    <color name="divider_bg">#ffe5e5e5</color>
+    <color name="textcolor_80">#ff808080</color>
+    <color name="max_text_size_text_color">#ff4d4d46</color>
+    <item type="color" name="btn_link_bg_color">@color/transparent2</item>
+    <color name="btn_link_text_border_color">#fff96650</color>
+    <color name="white_text">#ffffff</color>
 </resources>
