@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/zone_bg"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/back_solid"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white_text"
+                android:text="个人中心"
+                android:layout_marginRight="50dp"
+                android:textSize="18sp"/>
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/attention"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="@drawable/photo_bg"
+                android:layout_gravity="center"
+                android:paddingRight="2px"
+                android:src="@drawable/photo_default"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/message"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+           <ImageView
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_gravity="center"
+               android:src="@drawable/location"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textColor="@color/white_text"
+                android:textSize="30px"
+                android:text="距离100m"/>
+         </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/white_text"
+                android:textSize="36px"
+                android:text="运动 | 上网 | 购物 "/>
+        </LinearLayout>
+     </LinearLayout>
+
+
+</LinearLayout>
