@@ -9,7 +9,7 @@ import android.widget.Button;
 
 
 public class TestActivity extends Activity implements View.OnClickListener{
-    Button reg_btn,login_btn,zone_btn,profession_btn,guide_btn=null;
+    Button reg_btn,login_btn,zone_btn,profession_btn,guide_btn,main_btn=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +25,14 @@ public class TestActivity extends Activity implements View.OnClickListener{
         zone_btn=(Button)findViewById(R.id.zone_btn);
         profession_btn=(Button)findViewById(R.id.profession_btn);
         guide_btn=(Button)findViewById(R.id.guide_btn);
+        main_btn=(Button)findViewById(R.id.main_btn);
 
         guide_btn.setOnClickListener(this);
         reg_btn.setOnClickListener(this);
         login_btn.setOnClickListener(this);
         zone_btn.setOnClickListener(this);
         profession_btn.setOnClickListener(this);
+        main_btn.setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +57,10 @@ public class TestActivity extends Activity implements View.OnClickListener{
             case R.id.guide_btn:
                 Intent intent5=new Intent(getApplicationContext(),FirstActivity.class);
                 startActivity(intent5);
+                break;
+            case R.id.main_btn:
+                Intent intent6=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent6);
                 break;
         }
     }

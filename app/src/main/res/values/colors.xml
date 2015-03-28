@@ -19,4 +19,6 @@
     <item type="color" name="btn_link_bg_color">@color/transparent2</item>
     <color name="btn_link_text_border_color">#fff96650</color>
     <color name="white_text">#ffffff</color>
+    <color name="tab_unread_round_color">#ff6dc4e5</color>
+    <color name="red">#fff96650</color>
 </resources>

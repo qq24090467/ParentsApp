@@ -21,13 +21,13 @@
                     android:background="@drawable/title_tab_left_selecetor"
                     android:checked="true"
                     android:button="@null"
-                    android:text="评论" />
+                    android:text="好友" />
                 <RadioButton android:textColor="@color/textcolor_80"
                     android:gravity="center"
                     android:id="@+id/radioFlower"
                     android:background="@drawable/title_tab_right_selecetor"
                     android:button="@null"
-                    android:text="鲜花" />
+                    android:text="消息" />
             </RadioGroup>
         </LinearLayout>
     </LinearLayout>
