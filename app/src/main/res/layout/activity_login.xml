@@ -97,7 +97,7 @@
     <Button
         android:textColor="@color/btn_link_text_color"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/home_all_class"
+        android:id="@+id/to_login_btn"
         android:background="@drawable/btn_solid"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/btn_height"

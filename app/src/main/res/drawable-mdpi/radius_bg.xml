@@ -3,5 +3,5 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/white"/>
     <corners android:radius="10dp"/>
-    <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp" />
+    <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp" android:color="@color/divider_bg" />
 </shape>

@@ -10,7 +10,13 @@
     <string name="to_reg">立即注册</string>
     <string name="title_activity_login">登陆</string>
     <string name="title_activity_regsiter">注册</string>
+    <string name="title_m_activity_login">用户登陆</string>
+    <string name="title_m_activity_regsiter">用户注册</string>
     <string name="title_activity_user_profile">UserProfileActivity</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_appstart">appstart</string>
+    <string name="username_is_not_empty">用户名不能为空</string>
+    <string name="password_is_not_empty">密码不能为空</string>
+    <string name="network_busy">网络繁忙，请稍后重试！</string>
+    <string name="password_is_not_one">密码不一致，请重新输入！</string>
 </resources>
