@@ -21,4 +21,7 @@
     <color name="white_text">#ffffff</color>
     <color name="tab_unread_round_color">#ff6dc4e5</color>
     <color name="red">#fff96650</color>
+    <color name="cltxt_title_color_amend">#ff222222</color>
+    <color name="black">#ff000000</color>
+    <color name="clbg_chat_popupmenu_item_on">#4db8b8b8</color>
 </resources>

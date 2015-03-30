@@ -40,4 +40,20 @@
         <item name="android:textColor">@color/max_text_size_text_color</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="style_item_font_16">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="style_item_font_13">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
 </resources>

@@ -27,15 +27,21 @@
         android:id="@+id/profession_btn"
         android:layout_gravity="center_horizontal" />
     <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="引导页"
-    android:id="@+id/guide_btn"
-    android:layout_gravity="center_horizontal" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="引导页"
+        android:id="@+id/guide_btn"
+        android:layout_gravity="center_horizontal" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="主页面"
         android:id="@+id/main_btn"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:id="@+id/change_pwd_btn"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

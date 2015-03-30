@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@drawable/title_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@+id/profile_setting_title" android:text="编辑个人资料" android:layout_centerInParent="true" style="@style/TopTitle_Text" />
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/back_btn" android:background="@drawable/normal_btn_selector" android:clickable="true" android:layout_width="@dimen/title_right_btn_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+    <TextView android:id="@+id/title_text" android:text="编辑个人资料" android:layout_centerInParent="true" style="@style/TopTitle_Text" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/back_btn" android:background="@drawable/normal_btn_selector" android:clickable="true" android:layout_width="@dimen/title_right_btn_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
         <ImageView style="@style/back_btn_style" />
     </LinearLayout>
     <View android:background="@drawable/action_bar_divider" android:layout_width="@dimen/title_sperator_width" android:layout_height="fill_parent" android:layout_marginTop="0.100000024dip" android:layout_marginBottom="2.0dip" android:layout_toRightOf="@id/back_btn" />
     <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/send_btn" android:background="@drawable/normal_btn_selector" android:clickable="true" android:layout_width="@dimen/title_right_btn_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerInParent="true">
-        <ImageView android:background="@drawable/ic_send" android:layout_width="25.0dip" android:layout_height="25.0dip" />
+        <ImageView android:id="@+id/save_info" android:background="@drawable/ic_send" android:layout_width="25.0dip" android:layout_height="25.0dip" />
     </LinearLayout>
     <View android:background="@drawable/title_bar_bg" android:layout_width="@dimen/title_sperator_width" android:layout_height="fill_parent" android:layout_marginTop="0.100000024dip" android:layout_marginBottom="2.0dip" android:layout_toLeftOf="@id/send_btn" />
 </RelativeLayout>

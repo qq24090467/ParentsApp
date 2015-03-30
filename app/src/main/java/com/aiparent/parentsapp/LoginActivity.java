@@ -12,12 +12,13 @@ import android.widget.Toast;
 
 import com.aiparent.parentsapp.config.HttpsConstant;
 import com.aiparent.parentsapp.utill.JsonUtils;
-import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
+import org.apache.http.client.CookieStore;
 
 import java.io.UnsupportedEncodingException;
 
@@ -28,6 +29,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private Button to_login_btn=null;
     private LinearLayout back_btn=null;
     private TextView title_msg,left_msg=null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +81,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public  void toLogin(){
 
         AsyncHttpClient client = new AsyncHttpClient();
+        //保存登陆信息到cookie
+        MyApplication myApplication=(MyApplication)getApplication();
+        PersistentCookieStore myCookieStore = new PersistentCookieStore(myApplication);
+        client.setCookieStore(myCookieStore);
+
+
         RequestParams params=new RequestParams();
         params.put("username",username.getText().toString().trim());
         params.put("password",password.getText().toString().trim());
