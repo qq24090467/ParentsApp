@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+    <include layout="@layout/common_title_4"/>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"  android:layout_height="wrap_content">
+            <EditText android:gravity="top" android:textSize="15.0dip" android:textColorHint="#ffc7c7cd" android:id="@+id/feedback_edit" android:background="@color/white" android:padding="5.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="200.0dip" android:singleLine="false" android:hint="请输入您的建议以及问题反馈"/>
+            <TextView android:textSize="14.0dip" android:textColor="#ff756a64" android:gravity="center" android:id="@+id/feed_back_email_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="23.0dip" android:text="请留下邮箱，以便我们及时帮你解决" />
+            <EditText android:textSize="15.0dip" android:textColorHint="#ffc7c7cd" android:id="@+id/contact" android:background="@color/white" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:hint="如：weilanzhuan@qq.com" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

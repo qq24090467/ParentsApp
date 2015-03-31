@@ -6,7 +6,7 @@
     <color name="transparent2">#00000000</color>
     <color name="text_link_color">#fff96650</color>
     <color name="title_color">#ff505044</color>
-    <color name="new_back_color">#ffffff</color>
+    <color name="new_back_color">#f7f7f5</color>
     <item type="color" name="btn_normal_bg_pressed_color">@color/gray</item>
     <color name="gray">#ff999999</color>
     <color name="btn_link_text_color">#fff96650</color>

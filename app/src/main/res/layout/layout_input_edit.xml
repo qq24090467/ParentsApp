@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+    <include layout="@layout/common_title_4"/>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"  android:layout_height="wrap_content">
+            <EditText android:gravity="top" android:textSize="15.0dip" android:textColorHint="#ffc7c7cd" android:id="@+id/feedback_edit" android:background="@color/white" android:padding="5.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="200.0dip" android:singleLine="false" android:hint="请输入您的建议以及问题反馈"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

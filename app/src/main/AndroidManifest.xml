@@ -55,6 +55,26 @@
             android:name=".ChangePasswordActivity"
             android:label="@string/title_activity_appstart" >
         </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_appstart" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_appstart" >
+        </activity>
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/title_activity_appstart" >
+        </activity>
+        <activity
+            android:name=".ChangeSexActivity"
+            android:label="@string/title_activity_appstart" >
+        </activity>
+        <activity
+            android:name=".SelfInfoActivity"
+            android:label="@string/title_activity_appstart" >
+        </activity>
     </application>
 
 </manifest>

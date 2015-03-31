@@ -10,7 +10,8 @@ import android.widget.Button;
 
 public class TestActivity extends Activity implements View.OnClickListener{
     Button reg_btn,login_btn,zone_btn,profession_btn,
-            change_pwd_btn,guide_btn,main_btn=null;
+            change_pwd_btn,guide_btn,main_btn,help_btn,about_btn,feedback_btn,
+            sex_btn,self_info_btn=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,12 @@ public class TestActivity extends Activity implements View.OnClickListener{
         guide_btn=(Button)findViewById(R.id.guide_btn);
         main_btn=(Button)findViewById(R.id.main_btn);
         change_pwd_btn=(Button)findViewById(R.id.change_pwd_btn);
+        feedback_btn=(Button)findViewById(R.id.feedback_btn);
+        sex_btn=(Button)findViewById(R.id.sex_btn);
+        self_info_btn=(Button)findViewById(R.id.self_info_btn);
+
+        about_btn=(Button)findViewById(R.id.about_btn);
+        help_btn=(Button)findViewById(R.id.help_btn);
 
         guide_btn.setOnClickListener(this);
         reg_btn.setOnClickListener(this);
@@ -36,6 +43,11 @@ public class TestActivity extends Activity implements View.OnClickListener{
         profession_btn.setOnClickListener(this);
         main_btn.setOnClickListener(this);
         change_pwd_btn.setOnClickListener(this);
+        about_btn.setOnClickListener(this);
+        help_btn.setOnClickListener(this);
+        feedback_btn.setOnClickListener(this);
+        sex_btn.setOnClickListener(this);
+        self_info_btn.setOnClickListener(this);
     }
 
     @Override
@@ -68,6 +80,26 @@ public class TestActivity extends Activity implements View.OnClickListener{
             case R.id.change_pwd_btn:
                 Intent intent7=new Intent(getApplicationContext(),ChangePasswordActivity.class);
                 startActivity(intent7);
+                break;
+            case R.id.about_btn:
+                Intent intent8=new Intent(getApplicationContext(),AboutActivity.class);
+                startActivity(intent8);
+                break;
+            case R.id.help_btn:
+                Intent intent9=new Intent(getApplicationContext(),HelpActivity.class);
+                startActivity(intent9);
+                break;
+            case R.id.feedback_btn:
+                Intent intent10=new Intent(getApplicationContext(),FeedbackActivity.class);
+                startActivity(intent10);
+                break;
+            case R.id.sex_btn:
+                Intent intent11=new Intent(getApplicationContext(),ChangeSexActivity.class);
+                startActivity(intent11);
+                break;
+            case R.id.self_info_btn:
+                Intent intent12=new Intent(getApplicationContext(),SelfInfoActivity.class);
+                startActivity(intent12);
                 break;
         }
     }
