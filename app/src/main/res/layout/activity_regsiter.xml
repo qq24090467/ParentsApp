@@ -11,117 +11,24 @@
         android:layout_gravity="center"
         android:src="@drawable/app" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40.0dip"
-        android:layout_marginRight="40.0dip"
-        android:layout_marginTop="20.0dip"
-        android:orientation="vertical" >
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:minHeight="@dimen/home_menu_core_item_height"
-            android:orientation="horizontal"
-            android:paddingTop="20dip"
-            android:paddingRight="10.0dip" >
-
-            <ImageView
-                android:layout_width="100.0dip"
-                android:layout_height="wrap_content"
-                android:padding="5.0sp"
-                android:src="@drawable/ic_login_account"/>
-
-            <EditText
-                android:id="@+id/username"
+    <LinearLayout android:orientation="vertical" android:id="@+id/more_login_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/white_corner_bg" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="40.0dip">
+            <EditText android:textSize="16.0sp" android:gravity="center_vertical" android:textColor="@color/textcolor_80" android:id="@+id/username" android:background="@null" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:hint="手机/邮箱/昵称" android:singleLine="true" android:layout_weight="1.0" android:inputType="text" />
+            <View
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@android:color/transparent"
-                android:singleLine="true"
-                android:textColor="@color/textcolor_80"
-                android:gravity="left"
-                android:textSize="18.0sp" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1.0px"
-            android:background="@color/divider_bg" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:minHeight="@dimen/home_menu_core_item_height"
-            android:orientation="horizontal"
-            android:paddingLeft="12.0dip"
-            android:paddingTop="20dip"
-            android:paddingRight="10.0dip"
-            android:layout_marginLeft="-10dp">
-
-            <ImageView
-                android:layout_width="100.0dip"
-                android:layout_height="wrap_content"
-                android:padding="5.0sp"
-                android:src="@drawable/ic_login_password"/>
-
-            <EditText
-                android:id="@+id/password"
+                android:layout_height="1.0px"
+                android:background="@color/divider_bg" />
+            <EditText android:textSize="16.0sp" android:textColor="@color/textcolor_80" android:gravity="center_vertical" android:id="@+id/password" android:background="@null" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:hint="请输入至少6位密码" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPassword" />
+            <View
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@android:color/transparent"
-                android:inputType="textPassword"
-                android:password="true"
-                android:singleLine="true"
-                android:textColor="@color/textcolor_80"
-                android:textSize="15.0sp" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1.0px"
-            android:background="@color/divider_bg" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:minHeight="@dimen/home_menu_core_item_height"
-            android:orientation="horizontal"
-            android:paddingLeft="12.0dip"
-            android:paddingTop="20dip"
-            android:paddingRight="10.0dip"
-            android:layout_marginLeft="-10dp">
-
-            <ImageView
-                android:layout_width="100.0dip"
-                android:layout_height="wrap_content"
-                android:padding="5.0sp"
-                android:src="@drawable/ic_login_password"/>
-
-            <EditText
-                android:id="@+id/repeat_password"
+                android:layout_height="1.0px"
+                android:background="@color/divider_bg" />
+            <EditText android:textSize="16.0sp" android:textColor="@color/textcolor_80" android:gravity="center_vertical" android:id="@+id/repeat_password" android:background="@null" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:hint="重复新密码" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPassword" />
+            <View
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@android:color/transparent"
-                android:inputType="textPassword"
-                android:password="true"
-                android:singleLine="true"
-                android:textColor="@color/textcolor_80"
-                android:textSize="15.0sp" />
-
+                android:layout_height="1.0px"
+                android:background="@color/divider_bg" />
         </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1.0px"
-            android:background="@color/divider_bg" />
     </LinearLayout>
     <Button
         android:textColor="@color/btn_link_text_color"

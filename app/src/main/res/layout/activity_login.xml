@@ -42,8 +42,9 @@
                 android:background="@android:color/transparent"
                 android:singleLine="true"
                 android:textColor="@color/textcolor_80"
-                android:gravity="left"
-                android:textSize="18.0sp" />
+                android:gravity="center_vertical"
+                android:hint="手机/邮箱/昵称"
+                android:textSize="16.0sp" />
         </LinearLayout>
 
         <View
@@ -77,8 +78,10 @@
                 android:inputType="textPassword"
                 android:password="true"
                 android:singleLine="true"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
                 android:textColor="@color/textcolor_80"
-                android:textSize="15.0sp" />
+                android:textSize="16.0sp" />
 
             <ImageView
                 android:layout_width="wrap_content"

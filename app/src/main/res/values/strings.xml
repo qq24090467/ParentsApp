@@ -23,5 +23,5 @@
     <string name="activity_share_choose_share_wechat_moments">朋友圈</string>
     <string name="activity_share_choose_share_weibo">新浪微博</string>
     <string name="copy_group_link">复制链接</string>
-    <string name="change_passwd">复制链接</string>
+    <string name="change_passwd">修改密码</string>
 </resources>
