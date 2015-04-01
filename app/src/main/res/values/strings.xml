@@ -24,4 +24,6 @@
     <string name="activity_share_choose_share_weibo">新浪微博</string>
     <string name="copy_group_link">复制链接</string>
     <string name="change_passwd">修改密码</string>
+    <string name="feedback_title">意见反馈</string>
+    <string name="sex_title">修改性别</string>
 </resources>
