@@ -2,11 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
     <include layout="@layout/common_title_5"/>
-    <LinearLayout android:id="@+id/linear" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/board_whole" android:layout_margin="5dp">
-        <EditText android:textSize="16.0sp" android:textColor="@color/textcolor_80" android:textColorHint="@color/textcolor_80" android:id="@+id/search_province"  android:paddingLeft="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="left" android:hint="搜索学校所在省份" android:singleLine="true" android:drawableLeft="@drawable/search_icon" android:inputType="textCapSentences|textAutoCorrect|textShortMessage" android:imeOptions="actionSend|flagNoExtractUi" />
-    </LinearLayout>
     <!--城市列表-->
     <ListView
+        android:id="@+id/location_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>
+
 </LinearLayout>

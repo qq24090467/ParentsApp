@@ -9,7 +9,7 @@
             android:gravity="center"
             android:orientation="horizontal">
             <RadioGroup android:orientation="horizontal"
-                android:id="@+id/commentsTypeRadio"
+                android:id="@+id/TypeRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -17,14 +17,18 @@
                 <RadioButton
                     android:textColor="@color/textcolor_80"
                     android:gravity="center"
-                    android:id="@+id/radioComments"
+                    android:id="@+id/radioFriend"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:background="@drawable/title_tab_left_selecetor"
                     android:checked="true"
                     android:button="@null"
                     android:text="好友" />
                 <RadioButton android:textColor="@color/textcolor_80"
                     android:gravity="center"
-                    android:id="@+id/radioFlower"
+                    android:id="@+id/radioMsg"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:background="@drawable/title_tab_right_selecetor"
                     android:button="@null"
                     android:text="消息" />

@@ -11,7 +11,7 @@ import android.widget.Button;
 public class TestActivity extends Activity implements View.OnClickListener{
     Button reg_btn,login_btn,zone_btn,profession_btn,
             change_pwd_btn,guide_btn,main_btn,help_btn,about_btn,feedback_btn,
-            sex_btn,self_info_btn=null;
+            sex_btn,self_info_btn,setting_info_btn,location_btn=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,8 @@ public class TestActivity extends Activity implements View.OnClickListener{
         feedback_btn=(Button)findViewById(R.id.feedback_btn);
         sex_btn=(Button)findViewById(R.id.sex_btn);
         self_info_btn=(Button)findViewById(R.id.self_info_btn);
-
+        setting_info_btn=(Button)findViewById(R.id.setting_info_btn);
+        location_btn=(Button)findViewById(R.id.location_btn);
         about_btn=(Button)findViewById(R.id.about_btn);
         help_btn=(Button)findViewById(R.id.help_btn);
 
@@ -48,6 +49,8 @@ public class TestActivity extends Activity implements View.OnClickListener{
         feedback_btn.setOnClickListener(this);
         sex_btn.setOnClickListener(this);
         self_info_btn.setOnClickListener(this);
+        setting_info_btn.setOnClickListener(this);
+        location_btn.setOnClickListener(this);
     }
 
     @Override
@@ -100,6 +103,14 @@ public class TestActivity extends Activity implements View.OnClickListener{
             case R.id.self_info_btn:
                 Intent intent12=new Intent(getApplicationContext(),SelfInfoActivity.class);
                 startActivity(intent12);
+                break;
+            case R.id.setting_info_btn:
+                Intent intent13=new Intent(getApplicationContext(),SettingActivity.class);
+                startActivity(intent13);
+                break;
+            case R.id.location_btn:
+                Intent intent14=new Intent(getApplicationContext(),LocationChooseActivity.class);
+                startActivity(intent14);
                 break;
         }
     }

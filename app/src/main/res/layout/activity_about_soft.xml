@@ -25,17 +25,15 @@
             android:layout_height="1.0px"
             android:background="@color/divider_bg" />
         <RelativeLayout android:id="@+id/check_update" android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip">
-            <TextView android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="检测更新" android:layout_centerVertical="true" />
-            <TextView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical"  android:padding="5.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="25.0dip" android:text="已是最新版本" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="历史版本" android:layout_centerVertical="true"
+               />
+            <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
         </RelativeLayout>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1.0px"
             android:background="@color/divider_bg" />
-        <RelativeLayout android:id="@+id/agreement" android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip">
-            <TextView android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="注册协议" android:layout_centerVertical="true" />
-            <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-        </RelativeLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="1.0px"

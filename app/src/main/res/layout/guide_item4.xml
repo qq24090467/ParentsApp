@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    <ImageView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-   android:background="@drawable/guide_04"
-    ></ImageView>
-    </LinearLayout>
+    android:orientation="vertical" android:background="@drawable/guide_04" >
+
+    <Button android:id="@+id/guid_goto_login"
+        android:background="@drawable/btn_solid"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="40.0dip"
+        android:text="立即体验"
+        style="@style/max_text_size_style"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

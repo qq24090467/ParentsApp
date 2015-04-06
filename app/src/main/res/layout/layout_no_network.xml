@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/common_back" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--没有网络时候的界面-->
+    <LinearLayout android:orientation="vertical" android:id="@+id/llFriFooter" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fifteendp">
+        <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/no_fri_icon" android:layout_width="97.0dip" android:layout_height="68.0dip" />
+        <TextView android:textSize="@dimen/twentysp" android:textColor="@color/fri_nodata" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tendp" android:layout_marginTop="@dimen/fifteendp" android:layout_marginRight="@dimen/tendp" android:text="@string/no_network_show" />
+    </LinearLayout>
+</LinearLayout>

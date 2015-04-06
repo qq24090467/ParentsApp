@@ -26,4 +26,23 @@
     <string name="change_passwd">修改密码</string>
     <string name="feedback_title">意见反馈</string>
     <string name="sex_title">修改性别</string>
+    <string name="logout_account">退出登录</string>
+    <string name="setting_changepassword">修改密码</string>
+    <string name="setting_button">帮助</string>
+    <string name="aboutapp">关于孝子</string>
+    <string name="setting_check_update">检查更新</string>
+    <string name="activity_setting_feedback">意见反馈</string>
+    <string name="new_message_notify">消息通知</string>
+    <string name="black_list_management">黑名单管理</string>
+    <string name="nodata_show">抱歉，还没有数据哦~</string>
+    <string name="no_network_show">抱歉，还没有连接网络哦~</string>
+    <string name="friends_nearby">附近</string>
+    <string name="friends_newuser">新人</string>
+    <string name="friends_world">找人</string>
+    <string name="friends_like">喜欢</string>
+    <string name="image">图片</string>
+    <string name="fri_mayknow">可能认识的人</string>
+    <string name="group_chat_title_txt">群聊/群游戏</string>
+    <string name="robot">机器人</string>
+    <string name="search">搜索</string>
 </resources>

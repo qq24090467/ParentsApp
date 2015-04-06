@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/gray_e8e8e8" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/common_title_5"/>
+        <LinearLayout android:id="@+id/nmnofity" android:layout_marginTop="10.0dip" style="@style/ItemTop">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/new_message_notify" android:layout_weight="1.0"
+                />
+            <ImageView android:id="@+id/nmnsetting_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+        <View style="@style/DottedLine" />
+
+        <View style="@style/DottedLine" />
+        <LinearLayout android:id="@+id/changepassword" style="@style/ItemUnder">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/setting_changepassword" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/changepassword_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+
+        <View style="@style/DottedLine" />
+
+        <View style="@style/DottedLine" />
+
+        <View style="@style/DottedLine" />
+
+        <View style="@style/DottedLine" />
+        <LinearLayout android:id="@+id/setting_black_list_management" android:layout_width="fill_parent" style="@style/ItemTop"
+            android:layout_marginTop="15dp">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/black_list_management" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/feedback_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout> -
+        <include android:visibility="gone" layout="@layout/contactinfo_common_line" />
+        <LinearLayout android:id="@+id/settingcheckfontlayout" android:visibility="gone" android:layout_width="fill_parent" style="@style/ItemUnder">
+            <TextView android:textSize="13.0sp" android:textColor="@android:color/darker_gray" android:gravity="center_vertical" android:id="@+id/setting_font_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="默认字体" android:singleLine="true" />
+            <ImageView android:id="@+id/checkfont_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/settingcheckupdatelayout" android:layout_width="fill_parent" android:layout_marginTop="15.0dip" style="@style/ItemTop">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:id="@+id/settingcheckupdate" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/setting_check_update" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/checkupdate_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout> -->
+       <View style="@style/DottedLine" />
+        <LinearLayout android:id="@+id/settinghelplayout" android:layout_width="fill_parent" style="@style/ItemMiddle">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:id="@+id/settinghelp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/setting_button" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/help_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+        <View style="@style/DottedLine" />
+        <LinearLayout android:id="@+id/feedback_settinglogout" android:layout_width="fill_parent" style="@style/ItemMiddle">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/activity_setting_feedback" android:layout_weight="1.0"
+                 />
+            <ImageView android:id="@id/feedback_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+        <View style="@style/DottedLine" />
+        <LinearLayout android:id="@+id/welcom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="47.0dip" style="@style/ItemMiddle">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip"  android:layout_weight="1.0" />
+            <ImageView android:id="@+id/welcom_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/aboutfetion" android:layout_width="fill_parent" style="@style/ItemUnder">
+            <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/aboutapp" android:layout_weight="1.0"
+                />
+            <ImageView android:id="@+id/about_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="15.0dip">
+            <Button android:textSize="@dimen/com_btn_size" android:id="@+id/btn_settinglogout" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/btn_height"  android:layout_marginLeft="35.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="35.0dip" android:layout_marginBottom="30.0dip" android:text="@string/logout_account" android:textColor="@color/red" android:background="@drawable/btn_solid" style="@style/max_text_size_style" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

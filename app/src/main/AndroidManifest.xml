@@ -75,6 +75,8 @@
             android:name=".SelfInfoActivity"
             android:label="@string/title_activity_appstart" >
         </activity>
+        <activity android:name=".SettingActivity"/>
+        <activity android:name=".LocationChooseActivity"/>
     </application>
 
 </manifest>

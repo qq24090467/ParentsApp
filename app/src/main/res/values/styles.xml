@@ -56,4 +56,79 @@
         <item name="android:maxLines">1</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
+    <style name="Item">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginRight">0.0dip</item>
+        <item name="android:minHeight">50.0dip</item>
+    </style>
+    <style name="ItemTop" parent="@style/Item">
+        <item name="android:background">@drawable/comm_item_top_selector</item>
+    </style>
+    <style name="DottedLine">
+        <item name="android:background">@color/dotted_Line</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0px</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginRight">0.0dip</item>
+    </style>
+    <style name="ItemUnder" parent="@style/Item">
+        <item name="android:background">@drawable/comm_item_under_selector</item>
+    </style>
+    <style name="ItemMiddle" parent="@style/Item">
+        <item name="android:background">@drawable/comm_item_middle_selector</item>
+    </style>
+    <style name="common_lv_title_stytle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/txt_nineteen_sp</item>
+        <item name="android:textColor">@color/txt_black</item>
+    </style>
+    <style name="common_lv_time_style" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/txt_fourteen_sp</item>
+        <item name="android:textColor">@color/shake_des</item>
+    </style>
+    <style name="common_eighteen_black2" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/txt_eighteen_sp</item>
+        <item name="android:textColor">@color/txt_black2</item>
+    </style>
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
 </resources>

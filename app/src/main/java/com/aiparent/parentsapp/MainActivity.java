@@ -19,17 +19,18 @@ import com.aiparent.parentsapp.fragment.Fragment1;
 import com.aiparent.parentsapp.fragment.Fragment2;
 import com.aiparent.parentsapp.fragment.Fragment3;
 import com.aiparent.parentsapp.fragment.Fragment4;
+import com.aiparent.parentsapp.fragment.Fragment5;
 
 public class MainActivity extends FragmentActivity  {
 
     private FragmentTabHost mTabHost;
     private LayoutInflater layoutInflater;
-    private Class fragmentArray[] = { Fragment1.class, Fragment2.class,
-            Fragment3.class, Fragment4.class };
+    private Class fragmentArray[] = { Fragment1.class, Fragment3.class,
+            Fragment2.class, Fragment5.class ,Fragment4.class};
     int ViewListIDs[]={R.layout.tab_host_index_item,
-            R.layout.tab_host_makert_item,
             R.layout.tab_host_friends_item,
-            R.layout.tab_host_profiles_item};
+            R.layout.tab_host_makert_item,
+            R.layout.tab_host_nearby_item,R.layout.tab_host_profiles_item};
 
     private List<Fragment> list = new ArrayList<Fragment>();
     private ViewPager vp;
@@ -73,9 +74,11 @@ public class MainActivity extends FragmentActivity  {
         Fragment2 fragment2 = new Fragment2();
         Fragment3 fragment3 = new Fragment3();
         Fragment4 fragment4 = new Fragment4();
+        Fragment5 fragment5 = new Fragment5();
         list.add(fragment1);
-        list.add(fragment2);
         list.add(fragment3);
+        list.add(fragment2);
+        list.add(fragment5);
         list.add(fragment4);
         vp.setAdapter(new MyFragmentAdapter(getSupportFragmentManager(), list));
         vp.setCurrentItem(0);

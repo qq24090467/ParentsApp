@@ -24,4 +24,20 @@
     <color name="cltxt_title_color_amend">#ff222222</color>
     <color name="black">#ff000000</color>
     <color name="clbg_chat_popupmenu_item_on">#4db8b8b8</color>
+    <color name="more_item_text_color">#ff222222</color>
+    <color name="gray_e8e8e8">#ffe8e8e8</color>
+    <color name="dotted_Line">#b2cccccc</color>
+    <color name="item_under_normal">#ffffffff</color>
+    <color name="item_under_press">#ffeeeeee</color>
+    <color name="conversation_list_more_view">#fff2f2f2</color>
+    <color name="conversation_list_more_font">#ff3695d9</color>
+    <color name="common_back">#ffefefef</color>
+    <color name="fri_nodata">#ffd0d0d0</color>
+    <color name="txt_black">#ff333333</color>
+    <color name="shake_des">#ff999999</color>
+    <color name="line_bg_white">#ffe5e5e5</color>
+    <color name="common_orange">#ffff5722</color>
+    <color name="txt_sixc">#ffcccccc</color>
+    <color name="txt_black2">#ff666666</color>
+    <color name="alertdialog_line">#c6c6c6</color>
 </resources>

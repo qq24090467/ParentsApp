@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--消息列表item-->
+    <RelativeLayout android:background="@drawable/radius_bg" android:layout_width="fill_parent" android:layout_height="@dimen/eightytwodp" android:layout_marginLeft="@dimen/tendp" android:layout_marginTop="@dimen/fivedp" android:layout_marginRight="@dimen/tendp">
+        <ImageView android:id="@+id/rivVisi" android:background="@drawable/recent_icon" android:layout_width="@dimen/lv_item_imag_widhei" android:layout_height="@dimen/lv_item_imag_widhei" android:layout_marginLeft="@dimen/lv_item_avater_marleft" android:scaleType="fitXY" android:layout_centerVertical="true" android:contentDescription="@null" />
+        <ImageView android:id="@+id/rivVisi_tip" android:visibility="gone" android:layout_width="@dimen/tendp" android:layout_height="@dimen/tendp" android:layout_marginTop="@dimen/fifteendp" android:src="@drawable/new_point" android:layout_alignRight="@id/rivVisi" />
+        <TextView android:id="@+id/tvVisit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lv_item_to_avaterright" android:text="最近访客" android:layout_toRightOf="@id/rivVisi" android:layout_centerVertical="true" style="@style/common_lv_title_stytle" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/tvBadge" android:background="@drawable/message_badges" android:visibility="visible" android:layout_width="@dimen/twentyfivedp" android:layout_height="@dimen/twentyfivedp" android:layout_marginTop="@dimen/badgeMt" android:layout_marginRight="@dimen/badgeMt" android:layout_alignTop="@id/rivVisi" android:layout_alignRight="@id/rivVisi" android:layout_centerVertical="true"
+            android:text="12" />
+        <TextView android:id="@+id/chat_time" android:paddingTop="@dimen/sixdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chatlist_item_timemargin" android:layout_alignParentRight="true" style="@style/common_lv_time_style"
+            android:text="11-23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textView"
+            android:layout_below="@+id/tvVisit"
+            android:layout_alignLeft="@+id/tvBadge"
+            android:layout_alignStart="@+id/tvBadge"
+            android:layout_toRightOf="@+id/rivVisi"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="30dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -81,6 +81,18 @@
               android:text="个人资料"
               android:id="@+id/self_info_btn"
               android:layout_gravity="center_horizontal" />
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="设置中心"
+              android:id="@+id/setting_info_btn"
+              android:layout_gravity="center_horizontal" />
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="地区选择"
+              android:id="@+id/location_btn"
+              android:layout_gravity="center_horizontal" />
           </LinearLayout>
 
     </ScrollView>
