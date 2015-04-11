@@ -56,4 +56,17 @@ public class UserImpl implements UserInterface {
     public void Updatepassword(RequestParams params, AsyncHttpResponseHandler AsyncHttpResponseHandler) {
         AsyncHttpCilentUtil.getInstance().get(HttpsConstant.PASSWD_CHANGE_URL, params, AsyncHttpResponseHandler);
     }
+
+    /**
+     * 获取帮助
+     * @param page
+     * @param asyncHttpResponseHandler
+     */
+    @Override
+    public void getHelpProblem(int page,AsyncHttpResponseHandler asyncHttpResponseHandler) {
+        RequestParams params=new RequestParams();
+        params.put("p",page);
+        AsyncHttpCilentUtil.getInstance().post(HttpsConstant.PROBLEM_URL,params,asyncHttpResponseHandler);
+
+    }
 }

@@ -80,6 +80,7 @@
         </activity>
         <activity android:name=".activity.SettingActivity"/>
         <activity android:name=".activity.LocationChooseActivity"/>
+        <activity android:name=".activity.DetailHelpActivity"/>
     </application>
 
 </manifest>

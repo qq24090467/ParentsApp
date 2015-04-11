@@ -26,4 +26,5 @@ dependencies {
     compile files('libs/gson-2.2.4.jar')
     compile files('libs/common_utils.jar')
     compile files('libs/pinyin4j-2.5.0.jar')
+    compile project(':PullToRefreshlibrary')
 }
