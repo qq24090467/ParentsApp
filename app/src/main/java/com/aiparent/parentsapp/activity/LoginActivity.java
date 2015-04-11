@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aiparent.parentsapp.MyApplication;
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
+import com.aiparent.parentsapp.impl.UserImpl;
 import com.aiparent.parentsapp.utill.JsonUtils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -18,7 +21,6 @@ import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
-import org.apache.http.client.CookieStore;
 
 import java.io.UnsupportedEncodingException;
 
@@ -80,22 +82,16 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     public  void toLogin(){
 
-        AsyncHttpClient client = new AsyncHttpClient();
-        //保存登陆信息到cookie
-        MyApplication myApplication=(MyApplication)getApplication();
-        PersistentCookieStore myCookieStore = new PersistentCookieStore(myApplication);
-        client.setCookieStore(myCookieStore);
+        UserImpl userImpl=new UserImpl();
+        String user_name=username.getText().toString().trim();
+        String pass_word=password.getText().toString().trim();
 
-
-        RequestParams params=new RequestParams();
-        params.put("username",username.getText().toString().trim());
-        params.put("password",password.getText().toString().trim());
-        client.get(HttpsConstant.LOGIN_URL,params,new AsyncHttpResponseHandler() {
+        userImpl.Login(user_name,pass_word,new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 String result="";
                 try {
-                     result=new String(bytes ,"UTF-8");
+                    result=new String(bytes ,"UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
@@ -109,10 +105,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-               Toast.makeText(getApplicationContext(),R.string.network_busy,3000);
+                Toast.makeText(getApplicationContext(),R.string.network_busy,3000);
             }
-        }
-        );
+        });
     }
 
     public boolean judgeInput(){

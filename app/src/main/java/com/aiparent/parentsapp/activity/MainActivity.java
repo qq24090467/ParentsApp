@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.TabHost.TabSpec;
 import android.widget.TabHost.OnTabChangeListener;
 
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.adapter.MyFragmentAdapter;
 import com.aiparent.parentsapp.fragment.Fragment1;
 import com.aiparent.parentsapp.fragment.Fragment2;

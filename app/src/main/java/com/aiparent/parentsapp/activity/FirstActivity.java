@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import java.util.ArrayList;
 
@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.ImageView;
+
+import com.aiparent.parentsapp.R;
 
 public class FirstActivity extends Activity {
     ViewPager viewPager;

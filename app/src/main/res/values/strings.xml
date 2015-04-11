@@ -45,4 +45,6 @@
     <string name="group_chat_title_txt">群聊/群游戏</string>
     <string name="robot">机器人</string>
     <string name="search">搜索</string>
+    <string name="setting_title">设置中心</string>
+    <string name="helpcenter">帮助中心</string>
 </resources>

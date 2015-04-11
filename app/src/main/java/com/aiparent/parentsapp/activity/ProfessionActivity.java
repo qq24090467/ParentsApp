@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.*;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+
+import com.aiparent.parentsapp.R;
 
 
 /**

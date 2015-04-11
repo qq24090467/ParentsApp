@@ -11,7 +11,7 @@
         <View style="@style/DottedLine" />
 
         <View style="@style/DottedLine" />
-        <LinearLayout android:id="@+id/changepassword" style="@style/ItemUnder">
+        <LinearLayout android:id="@+id/changepassword_item" style="@style/ItemUnder">
             <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/setting_changepassword" android:layout_weight="1.0" />
             <ImageView android:id="@+id/changepassword_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
         </LinearLayout>
@@ -38,12 +38,12 @@
             <ImageView android:id="@+id/checkupdate_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
         </LinearLayout> -->
        <View style="@style/DottedLine" />
-        <LinearLayout android:id="@+id/settinghelplayout" android:layout_width="fill_parent" style="@style/ItemMiddle">
+        <LinearLayout android:id="@+id/help_item" android:layout_width="fill_parent" style="@style/ItemMiddle">
             <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:id="@+id/settinghelp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/setting_button" android:layout_weight="1.0" />
             <ImageView android:id="@+id/help_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
         </LinearLayout>
         <View style="@style/DottedLine" />
-        <LinearLayout android:id="@+id/feedback_settinglogout" android:layout_width="fill_parent" style="@style/ItemMiddle">
+        <LinearLayout android:id="@+id/feedback_item" android:layout_width="fill_parent" style="@style/ItemMiddle">
             <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/activity_setting_feedback" android:layout_weight="1.0"
                  />
             <ImageView android:id="@id/feedback_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
@@ -53,7 +53,7 @@
             <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip"  android:layout_weight="1.0" />
             <ImageView android:id="@+id/welcom_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />
         </LinearLayout>
-        <LinearLayout android:id="@+id/aboutfetion" android:layout_width="fill_parent" style="@style/ItemUnder">
+        <LinearLayout android:id="@+id/about_item"        android:layout_width="fill_parent" style="@style/ItemUnder">
             <TextView android:textSize="@dimen/setting_activity_textview_size" android:textColor="@color/more_item_text_color" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/aboutapp" android:layout_weight="1.0"
                 />
             <ImageView android:id="@+id/about_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/dish_made_arrow" />

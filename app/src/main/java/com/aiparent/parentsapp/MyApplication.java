@@ -5,6 +5,9 @@ import android.os.Build;
 import android.os.StrictMode;
 import android.util.Log;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.PersistentCookieStore;
+
 import java.net.CookieStore;
 
 /**
@@ -13,11 +16,18 @@ import java.net.CookieStore;
 public class MyApplication extends Application {
 
     private static final String LOG_TAG = "MyApplication";
+    private static MyApplication myApplication = null;
+
+    public static MyApplication getMyApplication() {
+        return myApplication;
+    }
+
 
     @Override
     public void onCreate() {
         setStrictMode();
         super.onCreate();
+        myApplication = this;
     }
 
     private void setStrictMode() {

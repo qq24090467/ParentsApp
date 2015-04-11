@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llLetter" android:background="@drawable/white_corner_bg" android:layout_width="fill_parent" android:layout_height="@dimen/fiftydp" android:layout_marginLeft="@dimen/elevendp" android:layout_marginTop="@dimen/fivedp" android:layout_marginRight="@dimen/elevendp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llLetter" android:background="@drawable/white_corners_top_bg" android:layout_width="fill_parent" android:layout_height="@dimen/fiftydp" android:layout_marginLeft="@dimen/elevendp" android:layout_marginTop="@dimen/fivedp" android:layout_marginRight="@dimen/elevendp">
         <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/common_orange" android:id="@+id/tvLetter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/twentythreedp" android:text="A" />
     </LinearLayout>
-    <RelativeLayout android:id="@+id/rlFriItem" android:background="@drawable/white_corner_bg" android:layout_width="fill_parent" android:layout_height="@dimen/seventydp" android:layout_marginLeft="@dimen/elevendp" android:layout_marginRight="@dimen/elevendp">
+    <RelativeLayout android:id="@+id/rlFriItem" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/seventydp" android:layout_marginLeft="@dimen/elevendp" android:layout_marginRight="@dimen/elevendp">
         <ImageView android:background="@drawable/set_line_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
         <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fifteendp" android:layout_centerVertical="true">
-            <com.aiparent.parentsapp.view.MyImageView android:id="@+id/ivAvater" android:layout_width="@dimen/fiftydp" android:layout_height="@dimen/fiftydp" />
+            <ImageView android:id="@+id/ivAvater" android:background="@drawable/default_pic" android:layout_width="@dimen/fiftydp" android:layout_height="@dimen/fiftydp" />
             <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tendp" android:text="@string/fri_mayknow" style="@style/common_eighteen_black2" />
         </LinearLayout>
         <ImageView android:id="@+id/ivArrow" android:background="@drawable/dish_made_arrow" android:visibility="gone" android:layout_width="@dimen/arrow_width" android:layout_height="@dimen/arrow_height" android:layout_marginRight="@dimen/twelfteendp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />

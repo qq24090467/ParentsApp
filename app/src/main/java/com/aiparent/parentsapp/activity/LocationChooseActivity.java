@@ -1,15 +1,14 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
+import com.aiparent.parentsapp.MyApplication;
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.adapter.LocationAdapter;
 import com.aiparent.parentsapp.bean.Location;
 import com.aiparent.parentsapp.config.HttpsConstant;
@@ -19,14 +18,11 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
-import com.loopj.android.http.TextHttpResponseHandler;
 
 import org.apache.http.Header;
 
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Type;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by weilanzhuan on 2015/4/3.

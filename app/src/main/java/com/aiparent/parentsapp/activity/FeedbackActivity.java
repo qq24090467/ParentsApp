@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
 import com.aiparent.parentsapp.utill.JsonUtils;
 import com.loopj.android.http.AsyncHttpClient;

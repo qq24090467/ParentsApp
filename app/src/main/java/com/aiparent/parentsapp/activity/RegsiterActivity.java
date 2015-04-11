@@ -1,10 +1,8 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
 import com.aiparent.parentsapp.utill.JsonUtils;
 import com.loopj.android.http.AsyncHttpClient;

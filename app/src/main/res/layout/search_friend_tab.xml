@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout android:orientation="vertical" android:id="@+id/llHeaderTop" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tendp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llSearch" android:background="@drawable/white_corner_bg" android:layout_width="fill_parent" android:layout_height="@dimen/thirtytwodp" android:layout_marginTop="@dimen/twelfteendp" android:layout_marginBottom="@dimen/sevendp">
+            <ImageView android:background="@drawable/fri_seachicon" android:layout_width="@dimen/fri_seach_icon_width" android:layout_height="@dimen/fri_seach_icon_height" android:layout_margin="@dimen/fri_seach_icon_margin" android:contentDescription="@string/image" />
+            <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/txt_black2" android:textColorHint="@color/txt_sixc" android:gravity="left|center" android:id="@+id/tvSerch" android:background="@android:color/transparent" android:paddingLeft="@dimen/fivedp" android:paddingRight="@dimen/threedp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/search"
+                android:visibility="visible" />
+            <EditText android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/txt_black2" android:textColorHint="@color/txt_sixc" android:gravity="left|center" android:id="@+id/etSearch" android:background="@android:color/transparent" android:paddingLeft="@dimen/fivedp" android:paddingRight="@dimen/threedp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/search" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llTopFour" android:background="@drawable/white_corner_bg" android:paddingTop="@dimen/twelfteendp" android:paddingBottom="@dimen/tendp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llNew" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:id="@+id/btnNew" android:background="@drawable/fri_new_selector" android:layout_width="@dimen/thirtydp" android:layout_height="@dimen/thirtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="top|right|center" android:id="@+id/tvBadgeNewUser" android:background="@drawable/new_point" android:paddingBottom="@dimen/onedp" android:visibility="gone" android:layout_width="@dimen/tendp" android:layout_height="@dimen/tendp" android:layout_margin="@dimen/threedp" android:layout_marginTop="@dimen/badgeMt" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/common_orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+        </LinearLayout>
+        <View android:background="@color/line_bg_white" android:layout_width="@dimen/onepx" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llWorld" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:id="@+id/btnWorld" android:background="@drawable/fri_world_selector" android:layout_width="@dimen/thirtydp" android:layout_height="@dimen/thirtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+            <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/common_orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_world" />
+        </LinearLayout>
+        <View android:background="@color/line_bg_white" android:layout_width="@dimen/onepx" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llNearby" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:id="@+id/btnNearby" android:background="@drawable/fri_nearby_selector" android:layout_width="@dimen/thirtydp" android:layout_height="@dimen/thirtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+            <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/common_orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_nearby" />
+        </LinearLayout>
+        <View android:background="@color/line_bg_white" android:layout_width="@dimen/onepx" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llLike" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:id="@+id/btnLike" android:background="@drawable/fri_like_selector" android:layout_width="@dimen/thirtydp" android:layout_height="@dimen/thirtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="top|right|center" android:id="@+id/tvLikeBadge" android:background="@drawable/new_point" android:paddingBottom="@dimen/onedp" android:visibility="gone" android:layout_width="@dimen/tendp" android:layout_height="@dimen/tendp" android:layout_margin="@dimen/threedp" android:layout_marginTop="@dimen/badgeMt" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/common_orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_like" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

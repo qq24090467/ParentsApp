@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.SharedConfig;
 import com.aiparent.parentsapp.config.SystemConstant;
 

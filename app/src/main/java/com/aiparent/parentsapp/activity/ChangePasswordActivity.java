@@ -1,4 +1,4 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +9,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aiparent.parentsapp.MyApplication;
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
+import com.aiparent.parentsapp.impl.UserImpl;
 import com.aiparent.parentsapp.utill.JsonUtils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -95,13 +98,13 @@ public class ChangePasswordActivity extends Activity implements View.OnClickList
     }
 
     public void changePasswd(){
-        AsyncHttpClient client=new AsyncHttpClient();
-        MyApplication myApplication=(MyApplication)getApplicationContext();
-        client.setCookieStore(new PersistentCookieStore(myApplication));
+
         RequestParams params=new RequestParams();
         params.put("password",old_password.getText().toString());
         params.put("new_password",new_password.getText().toString());
-        client.get(HttpsConstant.PASSWD_CHANGE_URL,params,new AsyncHttpResponseHandler() {
+
+        UserImpl user=new UserImpl();
+        user.Updatepassword(params,new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 String result="";
@@ -123,5 +126,6 @@ public class ChangePasswordActivity extends Activity implements View.OnClickList
                 Toast.makeText(getApplicationContext(),R.string.network_busy,3000).show();
             }
         });
+
     }
 }

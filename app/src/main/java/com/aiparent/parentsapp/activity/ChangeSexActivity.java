@@ -1,7 +1,8 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -9,7 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aiparent.parentsapp.MyApplication;
+import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
+import com.aiparent.parentsapp.impl.UserImpl;
 import com.aiparent.parentsapp.utill.JsonUtils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -58,7 +62,7 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.save_info:
-                toSubmitFeedback();
+                toSubmit();
                 break;
             case R.id.back_btn:
                 finish();
@@ -76,16 +80,12 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
         }
     }
 
-    public void toSubmitFeedback(){
-        AsyncHttpClient client =new AsyncHttpClient();
-
-        MyApplication myApplication=(MyApplication)getApplicationContext();
-        client.setCookieStore(new PersistentCookieStore(myApplication));
+    public void toSubmit(){
 
         RequestParams params=new RequestParams();
         params.put("sex",sex_flag+"");
-
-        client.post(HttpsConstant.UPDATE_INFO_URL, params, new AsyncHttpResponseHandler() {
+        UserImpl userImpl=new UserImpl();
+        userImpl.UpdateInfo(params,new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 String result = "";
@@ -94,6 +94,7 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
+                Log.v("result=",result);
                 int status = Integer.parseInt(JsonUtils.getValue(result, "status"));
                 if (status > 0) {//提交成功
                     Toast.makeText(getApplicationContext(), JsonUtils.getValue(result, "content"), 3000).show();
@@ -108,5 +109,8 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
 
             }
         });
+
+
+
     }
 }

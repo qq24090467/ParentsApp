@@ -1,9 +1,11 @@
-package com.aiparent.parentsapp;
+package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.aiparent.parentsapp.R;
 
 
 public class UserProfileActivity extends Activity {
