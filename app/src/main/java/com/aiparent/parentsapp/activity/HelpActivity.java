@@ -62,7 +62,7 @@ public class HelpActivity extends Activity {
         common_title.setText(R.string.helpcenter);
 
         mPullToRefreshListView=(PullToRefreshListView)findViewById(R.id.pull_to_refresh_listview);
-//        mPullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
+        mPullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
         mPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
