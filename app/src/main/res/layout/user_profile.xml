@@ -2,90 +2,137 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent" android:layout_height="match_parent"
     android:orientation="vertical">
-    <LinearLayout
+    <include layout="@layout/common_title_3"/>
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="320dp"
-        android:background="@drawable/zone_bg"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:adjustViewBounds="true"
-                android:layout_gravity="center"
-                android:src="@drawable/back_solid"/>
-            <TextView
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/white_text"
-                android:text="个人中心"
-                android:layout_marginRight="50dp"
-                android:textSize="18sp"/>
-         </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:orientation="vertical">
+                <RelativeLayout android:id="@+id/main_center_find_friend_layout" android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="120.0dip">
+                    <ImageView
+                        android:id="@+id/info_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/default_pic"
+                        android:layout_centerVertical="true"/>
+                    <TextView android:id="@+id/help_title_text" android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="我的资料" android:layout_toRightOf="@id/info_icon" android:layout_centerVertical="true" android:layout_marginLeft="@dimen/fivedp"/>
+                    <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@color/divider_bg" />
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/attention"
-                android:layout_gravity="center"/>
-            <ImageView
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:background="@drawable/photo_bg"
-                android:layout_gravity="center"
-                android:paddingRight="2px"
-                android:src="@drawable/photo_default"/>
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@drawable/message"/>
+            </LinearLayout>
+            <!--item2-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tendp"
+                android:orientation="vertical">
+                <RelativeLayout  android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                    <ImageView
+                        android:id="@+id/dongtai_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="@dimen/twentydp"
+                        android:src="@drawable/app_ic_label_message"
+                        android:layout_centerVertical="true"/>
+                    <TextView android:id="@+id/dongtai_text" android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="我的动态" android:layout_toRightOf="@id/dongtai_icon" android:layout_centerVertical="true" android:layout_marginLeft="@dimen/twentydp"/>
+                    <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@color/divider_bg" />
+
+            </LinearLayout>
+            <!--item2 end-->
+            <!--item3-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/normal_btn_selector"
+                android:layout_marginTop="@dimen/tendp"
+                android:orientation="vertical">
+                <RelativeLayout  android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" >
+                    <ImageView
+                        android:id="@+id/photo_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/twentydp"
+                        android:src="@drawable/app_ic_label_upload_pic"
+                        android:layout_centerVertical="true"/>
+                    <TextView android:id="@+id/photo_text" android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="我的相册" android:layout_toRightOf="@id/photo_icon" android:layout_centerVertical="true" android:layout_marginLeft="@dimen/twentydp"/>
+                    <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@color/divider_bg" />
+
+            </LinearLayout>
+            <!--item3 end-->
+            <!--item4-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/normal_btn_selector"
+                android:orientation="vertical">
+                <RelativeLayout  android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" >
+                    <ImageView
+                        android:id="@+id/article_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/twentydp"
+                        android:src="@drawable/app_ic_label_recipe_draft"
+                        android:layout_centerVertical="true"/>
+                    <TextView android:id="@+id/artice_text" android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="孝子日记" android:layout_toRightOf="@id/article_icon" android:layout_centerVertical="true" android:layout_marginLeft="@dimen/twentydp"/>
+                    <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@color/divider_bg" />
+
+            </LinearLayout>
+            <!--item4 end-->
+            <!--item5-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/normal_btn_selector"
+                android:orientation="vertical">
+                <RelativeLayout  android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" >
+                    <ImageView
+                        android:id="@+id/fav_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/twentydp"
+                        android:src="@drawable/app_ic_label_fav"
+                        android:layout_centerVertical="true"/>
+                    <TextView android:id="@+id/fa_text" android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="我的参与" android:layout_toRightOf="@id/fav_icon" android:layout_centerVertical="true" android:layout_marginLeft="@dimen/twentydp"/>
+                    <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@color/divider_bg" />
+
+            </LinearLayout>
+            <!--item5-->
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-           <ImageView
-               android:layout_width="60dp"
-               android:layout_height="60dp"
-               android:layout_gravity="center"
-               android:src="@drawable/location"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:textColor="@color/white_text"
-                android:textSize="30px"
-                android:text="距离100m"/>
-         </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:textColor="@color/white_text"
-                android:textSize="36px"
-                android:text="运动 | 上网 | 购物 "/>
-        </LinearLayout>
-     </LinearLayout>
-
+    </ScrollView>
 
 </LinearLayout>

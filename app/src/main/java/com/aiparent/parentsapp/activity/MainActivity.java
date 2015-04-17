@@ -16,18 +16,18 @@ import android.widget.TabHost.OnTabChangeListener;
 
 import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.adapter.MyFragmentAdapter;
-import com.aiparent.parentsapp.fragment.Fragment1;
+import com.aiparent.parentsapp.fragment.FragmentIndex;
 import com.aiparent.parentsapp.fragment.Fragment2;
 import com.aiparent.parentsapp.fragment.Fragment3;
-import com.aiparent.parentsapp.fragment.Fragment4;
+import com.aiparent.parentsapp.fragment.FragmentProfile;
 import com.aiparent.parentsapp.fragment.Fragment5;
 
 public class MainActivity extends FragmentActivity  {
 
     private FragmentTabHost mTabHost;
     private LayoutInflater layoutInflater;
-    private Class fragmentArray[] = { Fragment1.class, Fragment3.class,
-            Fragment2.class, Fragment5.class ,Fragment4.class};
+    private Class fragmentArray[] = { FragmentIndex.class, Fragment3.class,
+            Fragment2.class, Fragment5.class ,FragmentProfile.class};
     int ViewListIDs[]={R.layout.tab_host_index_item,
             R.layout.tab_host_friends_item,
             R.layout.tab_host_makert_item,
@@ -71,10 +71,10 @@ public class MainActivity extends FragmentActivity  {
      * 初始化Fragment
      */
     private void initPage() {
-        Fragment1 fragment1 = new Fragment1();
+        FragmentIndex fragment1 = new FragmentIndex();
         Fragment2 fragment2 = new Fragment2();
         Fragment3 fragment3 = new Fragment3();
-        Fragment4 fragment4 = new Fragment4();
+        FragmentProfile fragment4 = new FragmentProfile();
         Fragment5 fragment5 = new Fragment5();
         list.add(fragment1);
         list.add(fragment3);

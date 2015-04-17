@@ -35,10 +35,6 @@
             android:label="@string/title_activity_regsiter" >
         </activity>
         <activity
-            android:name=".activity.UserProfileActivity"
-            android:label="@string/title_activity_user_profile" >
-        </activity>
-        <activity
             android:name=".activity.ProfessionActivity"
             android:label="ProfessionActivity" >
         </activity>

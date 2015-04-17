@@ -9,14 +9,13 @@ import android.widget.TextView;
 
 import com.aiparent.parentsapp.R;
 
-public class Fragment1 extends Fragment {
-	TextView msg;
+public class FragmentIndex extends Fragment {
+
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment1, null);
-		msg = (TextView) rootView.findViewById(R.id.msg);
+		View rootView = inflater.inflate(R.layout.fragment_index, null);
 
 		return rootView;
 	}

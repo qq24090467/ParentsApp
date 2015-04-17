@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\android源码\ParentsApp\PullToRefreshlibrary\assets"/></dataSet><dataSet config="debug"><source path="E:\android源码\ParentsApp\PullToRefreshlibrary\build-types\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="F:\parentsApp\PullToRefreshlibrary\assets"/></dataSet><dataSet config="debug"><source path="F:\parentsApp\PullToRefreshlibrary\build-types\debug\assets"/></dataSet></merger>

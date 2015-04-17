@@ -23,12 +23,6 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="个人中心"
-                android:id="@+id/zone_btn"
-                android:layout_gravity="center_horizontal" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="职业选择"
                 android:id="@+id/profession_btn"
                 android:layout_gravity="center_horizontal" />
