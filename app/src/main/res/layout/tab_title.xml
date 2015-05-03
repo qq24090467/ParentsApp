@@ -7,32 +7,35 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:layout_gravity="center"
             android:orientation="horizontal">
             <RadioGroup android:orientation="horizontal"
                 android:id="@+id/TypeRadio"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/eightytwodp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true">
                 <RadioButton
-                    android:textColor="@color/textcolor_80"
+                    android:textColor="@color/color_radiobutton"
                     android:gravity="center"
                     android:id="@+id/radioFriend"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/cf_title_btn_width" android:layout_height="@dimen/cf_title_btn_height"
                     android:background="@drawable/title_tab_left_selecetor"
                     android:checked="true"
                     android:button="@null"
                     android:text="好友" />
-                <RadioButton android:textColor="@color/textcolor_80"
+                <RadioButton android:textColor="@color/color_radiobutton"
                     android:gravity="center"
                     android:id="@+id/radioMsg"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/cf_title_btn_width" android:layout_height="@dimen/cf_title_btn_height"
                     android:background="@drawable/title_tab_right_selecetor"
                     android:button="@null"
                     android:text="消息" />
             </RadioGroup>
+            <ImageView android:id="@+id/add_frd_btn" android:background="@drawable/right_plus" android:layout_width="@dimen/eighteendp" android:layout_height="@dimen/eighteendp" android:layout_marginLeft="@dimen/eightytwodp" android:layout_marginRight="@dimen/fivedp"  />
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

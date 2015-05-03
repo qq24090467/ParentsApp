@@ -3,7 +3,7 @@ package com.aiparent.parentsapp.bean;
 /**
  * Created by weilanzhuan on 2015/4/3.
  */
-public class Location {
+public class Region {
     private int id;
     private String name;
     private int upid;

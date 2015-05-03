@@ -8,17 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aiparent.parentsapp.R;
+import com.aiparent.parentsapp.servicer.GpsService;
 
 
 public class TestActivity extends Activity implements View.OnClickListener{
     Button reg_btn,login_btn,profession_btn,
-            guide_btn,main_btn,self_info_btn,setting_info_btn,location_btn=null;
+            guide_btn,main_btn=null;
+    Intent gpsServicer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
         findView();
+         gpsServicer=new Intent(this, GpsService.class);
+        startService(gpsServicer);
 
     }
 
@@ -28,9 +32,6 @@ public class TestActivity extends Activity implements View.OnClickListener{
         profession_btn=(Button)findViewById(R.id.profession_btn);
         guide_btn=(Button)findViewById(R.id.guide_btn);
         main_btn=(Button)findViewById(R.id.main_btn);
-        self_info_btn=(Button)findViewById(R.id.self_info_btn);
-        setting_info_btn=(Button)findViewById(R.id.setting_info_btn);
-        location_btn=(Button)findViewById(R.id.location_btn);
 
 
         guide_btn.setOnClickListener(this);
@@ -38,9 +39,7 @@ public class TestActivity extends Activity implements View.OnClickListener{
         login_btn.setOnClickListener(this);
         profession_btn.setOnClickListener(this);
         main_btn.setOnClickListener(this);
-        self_info_btn.setOnClickListener(this);
-        setting_info_btn.setOnClickListener(this);
-        location_btn.setOnClickListener(this);
+
     }
 
     @Override
@@ -66,19 +65,24 @@ public class TestActivity extends Activity implements View.OnClickListener{
                 Intent intent6=new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent6);
                 break;
-
-            case R.id.self_info_btn:
-                Intent intent12=new Intent(getApplicationContext(),SelfInfoActivity.class);
-                startActivity(intent12);
-                break;
-            case R.id.setting_info_btn:
-                Intent intent13=new Intent(getApplicationContext(),SettingActivity.class);
-                startActivity(intent13);
-                break;
-            case R.id.location_btn:
-                Intent intent14=new Intent(getApplicationContext(),LocationChooseActivity.class);
-                startActivity(intent14);
-                break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(gpsServicer);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+//        stopService(gpsServicer);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopService(gpsServicer);
     }
 }

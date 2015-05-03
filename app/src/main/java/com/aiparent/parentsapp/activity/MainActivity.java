@@ -91,6 +91,8 @@ public class MainActivity extends FragmentActivity  {
         return view;
     }
 
+
+
     public void listener(){
         vp.setOnPageChangeListener(new OnPageChangeListener() {
             @Override

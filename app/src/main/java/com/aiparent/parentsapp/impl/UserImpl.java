@@ -1,23 +1,23 @@
 package com.aiparent.parentsapp.impl;
 
-import android.app.Activity;
 import android.content.Context;
-import android.widget.Toast;
+import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.aiparent.parentsapp.Interface.UserInterface;
-import com.aiparent.parentsapp.MyApplication;
-import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
+import com.aiparent.parentsapp.config.SystemConstant;
+import com.aiparent.parentsapp.config.UserInfoConfig;
 import com.aiparent.parentsapp.utill.AsyncHttpCilentUtil;
+
 import com.aiparent.parentsapp.utill.JsonUtils;
-import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
 
 import java.io.UnsupportedEncodingException;
+
 
 /**
  * Created by weilanzhuan on 2015/4/10.
@@ -68,5 +68,41 @@ public class UserImpl implements UserInterface {
         params.put("p",page);
         AsyncHttpCilentUtil.getInstance().post(HttpsConstant.PROBLEM_URL,params,asyncHttpResponseHandler);
 
+    }
+    /**
+     * 注册
+     */
+    @Override
+    public void toRegsinter(RequestParams params, AsyncHttpResponseHandler asyncHttpResponseHandler) {
+        AsyncHttpCilentUtil.getInstance().post(HttpsConstant.SIGN_UP_URL,params,asyncHttpResponseHandler);
+
+    }
+
+    /*
+     *获取个人详细信息
+     */
+
+    @Override
+    public void getDetailUserInfo(final Context context) {
+        AsyncHttpCilentUtil.getInstance().get(HttpsConstant.DETAIL_USERINFO_URL,new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int i, Header[] headers, byte[] bytes) {
+                String result="";
+                try {
+                    result=new String(bytes ,"UTF-8");
+
+                    Log.v("result",JsonUtils.getValue(result,"content")+"==");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                SharedPreferences shared=new UserInfoConfig(context).GetConfig();
+                shared.edit().putString(SystemConstant.DETAIL_INFO, JsonUtils.getValue(result,"content")).commit();
+            }
+
+            @Override
+            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+
+            }
+        });
     }
 }

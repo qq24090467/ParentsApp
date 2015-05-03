@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="440dp"
+    android:layout_marginLeft="@dimen/tendp"
+    android:layout_marginTop="@dimen/twentydp"
+    android:layout_marginRight="@dimen/tendp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/test11">
+        <LinearLayout
+            android:id="@+id/title_linearlayout"
+            android:layout_width="260dp"
+            android:layout_height="@dimen/sixtydp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/twentydp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_text"
+                android:paddingLeft="@dimen/twentydp"
+                android:paddingTop="@dimen/fivedp"
+                android:textSize="18sp"
+                android:text="无论如何也要在春天吃一次花"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white_text"
+                android:paddingLeft="@dimen/twentydp"
+                android:paddingTop="@dimen/fivedp"
+                android:text="Photo by test"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/sixtydp"
+            android:padding="@dimen/fivedp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/twentydp"
+            android:src="@drawable/default_pic"
+            android:layout_toRightOf="@+id/title_linearlayout"
+            android:layout_marginLeft="@dimen/twelfteendp"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/eightytwodp"
+            android:layout_height="@dimen/eightytwodp"
+            android:layout_marginTop="@dimen/fivedp"
+            android:layout_gravity="center"
+            android:src="@drawable/default_pic"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/textcolor_80"
+                android:layout_marginTop="@dimen/twentydp"
+                android:padding="@dimen/fivedp"
+                android:textSize="18sp"
+                android:text="专题：测试"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/gray"
+                android:padding="@dimen/fivedp"
+
+                android:textSize="12sp"
+                android:text="专题：测试"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

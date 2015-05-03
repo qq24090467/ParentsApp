@@ -89,12 +89,16 @@
     <orderEntry type="library" exported="" name="android-auto-scroll-view-pager" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="pinyin4j-2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="AMap_3DMap_V2.4.1" level="project" />
     <orderEntry type="library" exported="" name="common_utils" level="project" />
     <orderEntry type="library" exported="" name="photoviewlibrary" level="project" />
-    <orderEntry type="library" exported="" name="android-async-http-1.4.6" level="project" />
     <orderEntry type="library" exported="" name="universal-image-loader-1.9.3" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Android_Cloud_V1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="android-async-http-1.4.6" level="project" />
+    <orderEntry type="library" exported="" name="so" level="project" />
+    <orderEntry type="library" exported="" name="Android_Location_V1.3.2" level="project" />
     <orderEntry type="module" module-name="PullToRefreshlibrary" exported="" />
   </component>
 </module>

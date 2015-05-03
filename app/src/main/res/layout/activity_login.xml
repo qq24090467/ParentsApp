@@ -17,6 +17,7 @@
         android:layout_marginLeft="40.0dip"
         android:layout_marginRight="40.0dip"
         android:layout_marginTop="20.0dip"
+        android:background="@drawable/white_corner_bg"
         android:orientation="vertical" >
 
         <LinearLayout

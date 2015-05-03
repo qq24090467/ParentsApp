@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" >
+    <include layout="@layout/common_title_8" android:id="@+id/title_bar"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_layout"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/tendp"
+            android:text="赞 126"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:drawableLeft="@drawable/btn_detail_like_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/tendp"
+            android:text="评论 126"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:drawableLeft="@drawable/btn_comment"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/tendp"
+            android:text="转发 126"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:drawableLeft="@drawable/btn_detail_repost_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/tendp"
+            android:text="收藏 126"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:drawableLeft="@drawable/btn_detail_favor_normal"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_above="@id/bottom_layout">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <RelativeLayout  android:background="@drawable/whiteclickable_bg" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                    <ImageView
+                        android:id="@+id/dongtai_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="@dimen/twentydp"
+                        android:src="@drawable/default_pic"
+                        android:layout_centerVertical="true"/>
+                    <TextView android:id="@+id/dongtai_text" android:textSize="15.0sp" android:textColor="@color/main_setting_content_text" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="专题名字" android:layout_toRightOf="@id/dongtai_icon" android:layout_centerVertical="true" android:layout_marginLeft="@dimen/twentydp"/>
+                    <ImageView android:textSize="13.0sp" android:textColor="#ff737373" android:gravity="center_vertical" android:background="@drawable/dish_made_arrow" android:padding="5.0dip" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@color/divider_bg" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/eightytwodp"
+                    android:layout_marginLeft="@dimen/twentydp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/sixtydp"
+                        android:layout_height="@dimen/sixtydp"
+                        android:layout_marginTop="@dimen/elevendp"
+                        android:src="@drawable/default_pic"/>
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_margin="@dimen/elevendp"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:paddingTop="@dimen/fivedp"
+                            android:text="tuanQQ军"/>
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:paddingTop="@dimen/fivedp"
+                            android:textColor="@color/textcolor_80"
+                            android:text="2月18日"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fivedp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="关注"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/reg_bg"
+                        android:layout_marginTop="@dimen/elevendp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/test11"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="内容"/>
+            <!--专题相关fragment-->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/about_article"/>
+            <!--同城热门分类-->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/other_category"/>
+
+        </LinearLayout>
+     </ScrollView>
+</RelativeLayout>

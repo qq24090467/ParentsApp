@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" android:layout_height="match_parent" android:background="@drawable/article_list_bg"
+    android:layout_width="fill_parent" android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/article_item" />
+    <include layout="@layout/common_title_7" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fiftydp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+        android:id="@+id/square_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_click_color"
+        android:gravity="center"
+        android:textSize="@dimen/text_max_size"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="广场"/>
+        <TextView
+            android:id="@+id/news_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_click_color"
+            android:gravity="center"
+            android:textSize="@dimen/text_max_size"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="动态"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/frame_content">
+        <include layout="@layout/layout_topic_item"/>
+    </FrameLayout>
 </LinearLayout>

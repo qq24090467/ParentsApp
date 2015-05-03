@@ -11,9 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aiparent.parentsapp.R;
-import com.aiparent.parentsapp.config.HttpsConstant;
+
+import com.aiparent.parentsapp.impl.UserImpl;
 import com.aiparent.parentsapp.utill.JsonUtils;
-import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
@@ -23,6 +23,7 @@ import java.io.UnsupportedEncodingException;
 
 
 public class RegsiterActivity extends Activity implements View.OnClickListener {
+
     private EditText username,password,repeat_password=null;
     private Button to_reg_btn=null;
     private LinearLayout back_btn=null;
@@ -62,7 +63,7 @@ public class RegsiterActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case  R.id.to_reg_btn:
-                if (judgeInput())toLogin();
+                if (judgeInput())toRegsinter();
                 break;
             case R.id.back_btn:
                 finish();
@@ -76,35 +77,34 @@ public class RegsiterActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    public  void toLogin(){
-
-        AsyncHttpClient client = new AsyncHttpClient();
+    public  void toRegsinter(){
+        UserImpl userImpl=new UserImpl();
         RequestParams params=new RequestParams();
         params.put("username",username.getText().toString().trim());
         params.put("password",password.getText().toString().trim());
-        client.get(HttpsConstant.SIGN_UP_URL,params,new AsyncHttpResponseHandler() {
-                    @Override
-                    public void onSuccess(int i, Header[] headers, byte[] bytes) {
-                        String result="";
-                        try {
-                            result=new String(bytes ,"UTF-8");
-                        } catch (UnsupportedEncodingException e) {
-                            e.printStackTrace();
-                        }
-                        int status=Integer.parseInt(JsonUtils.getValue(result, "status"));
-                        if (status>0){//登陆成功
-                            Toast.makeText(getApplicationContext(), JsonUtils.getValue(result, "content"), 3000).show();
-                        }else {
-                            Toast.makeText(getApplicationContext(), JsonUtils.getValue(result,"content"),3000).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                        Toast.makeText(getApplicationContext(),R.string.network_busy,3000);
-                    }
+        userImpl.toRegsinter(params,new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int i, Header[] headers, byte[] bytes) {
+                String result="";
+                try {
+                    result=new String(bytes ,"UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
                 }
-        );
+                int status=Integer.parseInt(JsonUtils.getValue(result, "status"));
+                if (status>0){//登陆成功
+                    Toast.makeText(getApplicationContext(), JsonUtils.getValue(result, "content"), 3000).show();
+                }else {
+                    Toast.makeText(getApplicationContext(), JsonUtils.getValue(result,"content"),3000).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+                Toast.makeText(getApplicationContext(),R.string.network_busy,3000);
+            }
+        });
+
     }
 
     public boolean judgeInput(){

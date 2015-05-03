@@ -49,4 +49,9 @@
     <dimen name="sevendp">7.0dip</dimen>
     <dimen name="seventydp">70.0dip</dimen>
     <dimen name="twentydp">20.0dip</dimen>
+    <dimen name="cf_title_btn_width">83.5dip</dimen>
+    <dimen name="onehundre_ten_dp">110.0dip</dimen>
+    <dimen name="fourtydp">40.0dip</dimen>
+    <dimen name="cf_title_btn_height">34.0dip</dimen>
+    <dimen name="eighteendp">18.0dip</dimen>
 </resources>

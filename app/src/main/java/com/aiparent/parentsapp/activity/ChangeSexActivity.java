@@ -1,6 +1,8 @@
 package com.aiparent.parentsapp.activity;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +15,8 @@ import android.widget.Toast;
 import com.aiparent.parentsapp.MyApplication;
 import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.config.HttpsConstant;
+import com.aiparent.parentsapp.config.SystemConstant;
+import com.aiparent.parentsapp.config.UserInfoConfig;
 import com.aiparent.parentsapp.impl.UserImpl;
 import com.aiparent.parentsapp.utill.JsonUtils;
 import com.loopj.android.http.AsyncHttpClient;
@@ -33,6 +37,8 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
     private TextView title_text=null;
     private ImageView male_img,female_img=null;
     public int sex_flag=0;
+    private static final int SEX_REQUEST_CODE = 8;// 家庭住址
+    private SharedPreferences shared;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +57,11 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
         title_text=(TextView)findViewById(R.id.title_text);
         title_text.setText(R.string.sex_title);
 
+        shared=new UserInfoConfig(getApplicationContext()).GetConfig();
+        String user_info_json=shared.getString(SystemConstant.DETAIL_INFO,"");
+        Log.v("userinfo",user_info_json);
+        sex_flag=Integer.parseInt(JsonUtils.getValue(user_info_json,"sex"));
+
         back_btn.setOnClickListener(this);
         save_info.setOnClickListener(this);
         male_img.setOnClickListener(this);
@@ -62,7 +73,10 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.save_info:
-                toSubmit();
+                Intent intent=new Intent();
+                intent.putExtra("sex",sex_flag+"");
+                setResult(SEX_REQUEST_CODE, intent);
+                finish();
                 break;
             case R.id.back_btn:
                 finish();
@@ -80,37 +94,5 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
         }
     }
 
-    public void toSubmit(){
 
-        RequestParams params=new RequestParams();
-        params.put("sex",sex_flag+"");
-        UserImpl userImpl=new UserImpl();
-        userImpl.UpdateInfo(params,new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int i, Header[] headers, byte[] bytes) {
-                String result = "";
-                try {
-                    result = new String(bytes, "UTF-8");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
-                Log.v("result=",result);
-                int status = Integer.parseInt(JsonUtils.getValue(result, "status"));
-                if (status > 0) {//提交成功
-                    Toast.makeText(getApplicationContext(), JsonUtils.getValue(result, "content"), 3000).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), JsonUtils.getValue(result, "content"), 3000).show();
-                }
-            }
-
-            @Override
-            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                Toast.makeText(getApplicationContext(), "网络繁忙，请稍后重试！"+i, 3000).show();
-
-            }
-        });
-
-
-
-    }
 }

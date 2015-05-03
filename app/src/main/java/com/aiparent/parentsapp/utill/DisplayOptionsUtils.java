@@ -4,7 +4,6 @@ import android.graphics.Bitmap;
 
 import com.aiparent.parentsapp.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 /**

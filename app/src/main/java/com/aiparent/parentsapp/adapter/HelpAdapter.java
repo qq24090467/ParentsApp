@@ -1,7 +1,6 @@
 package com.aiparent.parentsapp.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +9,7 @@ import android.widget.TextView;
 
 import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.bean.HelpBean;
-import com.aiparent.parentsapp.bean.Location;
 
-import java.util.LinkedList;
 import java.util.List;
 
 /**

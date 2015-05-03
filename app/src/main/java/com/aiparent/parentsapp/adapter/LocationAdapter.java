@@ -1,6 +1,5 @@
 package com.aiparent.parentsapp.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.aiparent.parentsapp.R;
 
-import com.aiparent.parentsapp.bean.Location;
+import com.aiparent.parentsapp.bean.Region;
 
 import java.util.List;
 
@@ -20,9 +19,9 @@ import java.util.List;
 public class LocationAdapter extends BaseAdapter {
 
     private  Context context=null;
-    private  List<Location> list=null;
+    private  List<Region> list=null;
 
-    public LocationAdapter(Context context, List<Location> list){
+    public LocationAdapter(Context context, List<Region> list){
         this.context=context;
         this.list=list;
 

@@ -65,8 +65,45 @@
                            android:id="@+id/v_dot4"
                            style="@style/dot_style" />
                    </LinearLayout>
+
                </LinearLayout>
            </FrameLayout>
+           <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"  android:background="@color/white" android:paddingTop="@dimen/fivedp" android:paddingBottom="@dimen/tendp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+               <LinearLayout android:gravity="center" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView   android:background="@drawable/index_test1" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+               <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test2" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+               <LinearLayout android:gravity="center" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test3" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+               <LinearLayout android:gravity="center" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test4" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+           </LinearLayout>
+           <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"  android:background="@color/white"  android:paddingBottom="@dimen/fivedp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+               <LinearLayout android:gravity="center" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test5" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+               <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test6" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+               <LinearLayout android:gravity="center" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test7" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+               <LinearLayout android:gravity="center" android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                   <ImageView  android:background="@drawable/index_test8" android:layout_width="@dimen/sixtydp" android:layout_height="@dimen/sixtydp" android:layout_marginLeft="@dimen/fivedp" android:layout_marginTop="@dimen/onedp" android:layout_marginRight="@dimen/fivedp" android:layout_marginBottom="@dimen/onedp" />
+                   <TextView android:textSize="@dimen/txt_eighteen_sp" android:textColor="@color/textcolor_80" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_newuser" />
+               </LinearLayout>
+           </LinearLayout>
 
        </LinearLayout>
    </ScrollView>

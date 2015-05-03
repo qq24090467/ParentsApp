@@ -47,4 +47,9 @@
     <string name="search">搜索</string>
     <string name="setting_title">设置中心</string>
     <string name="helpcenter">帮助中心</string>
+    <string name="edit_desc">编辑个人简介</string>
+    <string name="edit_style">编辑个性签名</string>
+    <string name="edit_live_location">请选择居住地址</string>
+    <string name="edit_home_location">请选择家庭住址</string>
+    <string name="profile_zone">个人资料</string>
 </resources>

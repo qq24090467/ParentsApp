@@ -97,6 +97,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 }
                 int status=Integer.parseInt(JsonUtils.getValue(result,"status"));
                 if (status>0){//登陆成功
+                    sendBroadcastTo();
                     Toast.makeText(getApplicationContext(), JsonUtils.getValue(result,"content"),3000).show();
                 }else {
                     Toast.makeText(getApplicationContext(), JsonUtils.getValue(result,"content"),3000).show();
@@ -124,5 +125,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         }
 
         return true;
+    }
+
+    //发送广播
+    private void sendBroadcastTo(){
+        Intent intent = new Intent();
+        intent.setAction("com.aiparent.parentsapp.broadCastFlag");
+        LoginActivity.this.sendBroadcast(intent);
     }
 }

@@ -73,25 +73,30 @@ public class WelcomeActivity extends Activity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent;
-                        //如果第一次，则进入引导页WelcomeActivity
-                        if (first) {
-                            shared.edit().putBoolean(SystemConstant.ISFIRST_TIME,false).commit();
-                            intent = new Intent(WelcomeActivity.this,
-                                    FirstActivity.class);
-                        } else {
-                            intent = new Intent(WelcomeActivity.this,
-                                    TestActivity.class);
-                        }
-                        startActivity(intent);
-                        // 设置Activity的切换效果
-                        overridePendingTransition(R.anim.in_from_right,
-                                R.anim.out_to_left);
-                        WelcomeActivity.this.finish();
+                        intentTo();
                     }
                 }, TIME);
             }
+            public void intentTo(){
+                Intent intent;
+                //如果第一次，则进入引导页WelcomeActivity
+                if (first) {
+                    shared.edit().putBoolean(SystemConstant.ISFIRST_TIME,false).commit();
+                    intent = new Intent(WelcomeActivity.this,
+                            FirstActivity.class);
+                } else {
+                    intent = new Intent(WelcomeActivity.this,
+                            TestActivity.class);
+                }
+                startActivity(intent);
+                // 设置Activity的切换效果
+                overridePendingTransition(R.anim.in_from_right,
+                        R.anim.out_to_left);
+                WelcomeActivity.this.finish();
+            }
         });
+
+
 
     }
 
