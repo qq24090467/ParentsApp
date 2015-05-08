@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include layout="@layout/common_title_5"/>
+    <GridView
+        android:id="@+id/grid_album"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:layout_margin="@dimen/tendp"
+        android:horizontalSpacing="@dimen/fivedp"
+        android:verticalSpacing="@dimen/fivedp"/>
+
+</LinearLayout>

@@ -4,14 +4,12 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 import android.os.StrictMode;
-import android.util.Log;
+
 
 import com.aiparent.parentsapp.utill.CacheUtils;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.PersistentCookieStore;
+import com.amap.api.location.AMapLocation;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
-import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -30,6 +28,7 @@ public class MyApplication extends Application {
 
     private static final String LOG_TAG = "MyApplication";
     private static MyApplication myApplication = null;
+    private static AMapLocation aMapLocation=null;
 
     public static MyApplication getMyApplication() {
         return myApplication;
@@ -86,4 +85,11 @@ public class MyApplication extends Application {
         ImageLoader.getInstance().init(config);
     }
 
+    public static void setaMapLocation(AMapLocation aMapLocation) {
+        MyApplication.aMapLocation = aMapLocation;
+    }
+
+    public static AMapLocation getaMapLocation() {
+        return aMapLocation;
+    }
 }

@@ -22,7 +22,7 @@
             android:id="@+id/news_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_click_color"
+            android:textColor="@color/textcolor_80"
             android:gravity="center"
             android:textSize="@dimen/text_max_size"
             android:layout_gravity="center"

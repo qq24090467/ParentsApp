@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.aiparent.parentsapp.MyApplication;
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.location.LocationManagerProxy;
@@ -44,6 +45,7 @@ public class GpsService extends Service implements AMapLocationListener {
                 desc = locBundle.getString("desc");
                 Log.d("我的位置是：", "desc = " + desc);
             }
+            MyApplication.setaMapLocation(aMapLocation);
         }
     }
 

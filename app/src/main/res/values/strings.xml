@@ -52,4 +52,11 @@
     <string name="edit_live_location">请选择居住地址</string>
     <string name="edit_home_location">请选择家庭住址</string>
     <string name="profile_zone">个人资料</string>
+    <string name="my_favtor">我的收藏</string>
+    <string name="add_daily">再写一篇</string>
+    <string name="my_diary">我的家庭日记</string>
+    <string name="add_album">创建相册</string>
+    <string name="my_album">我的相册</string>
+    <string name="add_dairy_photo">添加图片</string>
+    <string name="edit_dairy">编辑家庭日记</string>
 </resources>

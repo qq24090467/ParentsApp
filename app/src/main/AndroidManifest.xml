@@ -90,6 +90,10 @@
         <activity android:name=".activity.LocationChooseActivity"/>
         <activity android:name=".activity.DetailHelpActivity"/>
         <activity android:name=".activity.EditSelfInfoActivity"/>
+        <activity android:name=".activity.FavorActivity"/>
+        <activity android:name=".activity.DailyActivity"/>
+        <activity android:name=".activity.AlbumActivity"/>
+        <activity android:name=".activity.DairyEditActivity"/>
         <service android:name=".servicer.GpsService" android:enabled="true"/>
         <receiver android:name=".servicer.UpdateInfoBroadcastReceiver">
             <intent-filter>

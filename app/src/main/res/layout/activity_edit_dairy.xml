@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_title_4"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/fivedp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginRight="@dimen/tendp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/dairy_content_text"
+            android:layout_width="fill_parent"
+            android:layout_height="170dp" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/gray_e8e8e8">
+            <ImageView
+                android:id="@+id/dairy_at_img"
+                android:layout_width="@dimen/thirtydp"
+                android:layout_height="@dimen/thirtydp"
+                android:padding="@dimen/fivedp"
+                android:src="@drawable/post_at"/>
+            <ImageView
+                android:id="@+id/dairy_loation_img"
+                android:layout_width="@dimen/thirtydp"
+                android:layout_height="@dimen/thirtydp"
+                android:padding="@dimen/fivedp"
+                android:layout_toRightOf="@id/dairy_at_img"
+                android:src="@drawable/positioning"/>
+            <TextView
+                android:id="@+id/dairy_loation_text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="地址"
+                android:gravity="center"
+                android:layout_toRightOf="@id/dairy_loation_img"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <GridView
+        android:id="@+id/daily_photos_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fivedp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:verticalSpacing="@dimen/fivedp"
+        android:stretchMode="columnWidth"
+        android:numColumns="3"
+        android:layout_marginRight="@dimen/tendp"/>
+
+</LinearLayout>
