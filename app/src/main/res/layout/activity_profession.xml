@@ -6,30 +6,27 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical">
-       <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="350dp"
-           android:orientation="vertical">
-           <HorizontalScrollView
-               android:layout_width="wrap_content"
-               android:layout_height="fill_parent"
-               android:layout_gravity="center_vertical"
-               android:id="@+id/mHorizontalScrollView"
-               android:scrollbars="none">
-               <LinearLayout
-                   android:id="@+id/id_gallery"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center_vertical"
-                   android:orientation="horizontal" >
-               </LinearLayout>
-           </HorizontalScrollView>
-       </LinearLayout>
-        <TextView
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/fourtydp">
+        <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="请选择职业"
-            style="@style/TopTitle_Text"/>
+            android:layout_height="fill_parent">
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <GridView
+                   android:id="@+id/job_gridview"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:verticalSpacing="@dimen/tendp"
+                   android:layout_margin="@dimen/tendp"
+                   android:horizontalSpacing="@dimen/tendp"
+                   android:stretchMode="columnWidth"
+                   android:numColumns="3">
+
+               </GridView>
+           </LinearLayout>
+        </ScrollView>
      </LinearLayout>
 </LinearLayout>

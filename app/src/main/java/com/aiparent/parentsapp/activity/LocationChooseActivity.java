@@ -38,6 +38,7 @@ public class LocationChooseActivity extends Activity {
     String result;
     List<Region>list=null;
     String location="";
+    String location_text="";
     private LinearLayout back_btn;
     private TextView common_title;
     @Override
@@ -68,6 +69,7 @@ public class LocationChooseActivity extends Activity {
            @Override
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                location+=list.get(position).getId()+",";
+               location_text+=list.get(position).getName()+" ";
                getLocationData(list.get(position).getId(),list.get(position).getLevel()+1);
            }
        });
@@ -95,6 +97,7 @@ public class LocationChooseActivity extends Activity {
 //                    startActivity(new Intent(LocationChooseActivity.this,TestActivity.class));
                     Intent intent = new Intent();
                     intent.putExtra("location", location);
+                    intent.putExtra("location_text",location_text);
                     setResult(getIntent().getExtras().getInt("request_code"), intent);
                     finish();
                 }

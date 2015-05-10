@@ -2,10 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent" android:layout_height="match_parent"
     android:orientation="vertical">
-   <include layout="@layout/tab_title"/>
-   <FrameLayout
-       android:id="@+id/list_content"
+   <include layout="@layout/common_title_9"/>
+   <LinearLayout
        android:layout_width="fill_parent"
-       android:layout_height="fill_parent"/>
+       android:layout_height="fill_parent"
+       android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="330dp"
+           android:orientation="vertical"
+           android:background="@drawable/bg_question">
+           <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="2">
+               <TextView
+                   android:id="@+id/question_title"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white_text"
+                   android:textSize="30sp"
+                   android:gravity="center"
+                   android:layout_centerInParent="true"
+                   android:text="点击下面的按钮提出问题"/>
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="3">
+               <ImageButton
+                   android:id="@+id/to_question_btm"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:background="@drawable/question_btn_selector"/>
+           </RelativeLayout>
+
+       </LinearLayout>
+       <FrameLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/question_text"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/sixtydp"
+               android:layout_marginTop="@dimen/fourtydp"
+               android:layout_marginLeft="@dimen/fourtydp"
+               android:layout_marginRight="@dimen/twentydp"
+               android:layout_marginBottom="@dimen/twentydp"
+               android:text="xxx回答了xxx的问题"
+               android:gravity="center"
+               android:background="@drawable/bg_question_item_bg"/>
+           <ImageView
+               android:id="@+id/person_photo_img"
+               android:layout_width="@dimen/fourtydp"
+               android:layout_height="@dimen/fourtydp"
+               android:layout_marginTop="@dimen/twentydp"
+               android:layout_marginLeft="@dimen/twentydp"
+               android:src="@drawable/default_pic"/>
+       </FrameLayout>
+
+
+
+   </LinearLayout>
 
 </LinearLayout>

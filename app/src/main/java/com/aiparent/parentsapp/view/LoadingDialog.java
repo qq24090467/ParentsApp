@@ -26,10 +26,10 @@ public class LoadingDialog  {
     private ProgressBar loading_proessbar;
     private TextView loading_text;
 
-    public LoadingDialog(Context context) {
-        this.context = context;
-        WindowManager windowManager = (WindowManager) context
-                .getSystemService(Context.WINDOW_SERVICE);
+     public LoadingDialog(Context context) {
+            this.context = context;
+            WindowManager windowManager = (WindowManager) context
+                    .getSystemService(Context.WINDOW_SERVICE);
         display = windowManager.getDefaultDisplay();
     }
 

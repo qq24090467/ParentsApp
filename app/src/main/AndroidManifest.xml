@@ -94,6 +94,8 @@
         <activity android:name=".activity.DailyActivity"/>
         <activity android:name=".activity.AlbumActivity"/>
         <activity android:name=".activity.DairyEditActivity"/>
+        <activity android:name=".activity.FriendsActivity"/>
+        <activity android:name=".activity.CategoryActivity"/>
         <service android:name=".servicer.GpsService" android:enabled="true"/>
         <receiver android:name=".servicer.UpdateInfoBroadcastReceiver">
             <intent-filter>

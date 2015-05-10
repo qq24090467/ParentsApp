@@ -17,6 +17,7 @@
         android:textSize="@dimen/text_max_size"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:background="@drawable/actionbar_tab_selected"
         android:text="广场"/>
         <TextView
             android:id="@+id/news_text"
@@ -27,13 +28,12 @@
             android:textSize="@dimen/text_max_size"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="动态"/>
+            android:text="活动"/>
 
     </LinearLayout>
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/frame_content">
-        <include layout="@layout/layout_topic_item"/>
     </FrameLayout>
 </LinearLayout>

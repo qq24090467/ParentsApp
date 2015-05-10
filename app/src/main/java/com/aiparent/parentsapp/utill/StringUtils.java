@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -281,4 +282,14 @@ public class StringUtils {
 		
 		return sb.toString();
 	}
+
+    public static String BytesToString(byte[] bytes){
+        String result="";
+        try {
+            result=new String(bytes,"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

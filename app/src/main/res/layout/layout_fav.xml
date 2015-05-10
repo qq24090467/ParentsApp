@@ -16,6 +16,7 @@
             android:textSize="@dimen/text_max_size"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/actionbar_tab_selected"
             android:text="人物"/>
         <TextView
             android:id="@+id/fav_activity_text"

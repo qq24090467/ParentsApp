@@ -28,7 +28,11 @@ public class MyApplication extends Application {
 
     private static final String LOG_TAG = "MyApplication";
     private static MyApplication myApplication = null;
-    private static AMapLocation aMapLocation=null;
+
+    private static boolean isLogin=false;
+    private static  double longitude=0;//经度
+    private static  double latitude=0;//纬度
+    private static  String MyLocationName="";
 
     public static MyApplication getMyApplication() {
         return myApplication;
@@ -85,11 +89,36 @@ public class MyApplication extends Application {
         ImageLoader.getInstance().init(config);
     }
 
-    public static void setaMapLocation(AMapLocation aMapLocation) {
-        MyApplication.aMapLocation = aMapLocation;
+
+    public static boolean isIsLogin() {
+        return isLogin;
     }
 
-    public static AMapLocation getaMapLocation() {
-        return aMapLocation;
+    public static void setIsLogin(boolean isLogin) {
+        MyApplication.isLogin = isLogin;
+    }
+
+    public static String getMyLocationName() {
+        return MyLocationName;
+    }
+
+    public static double getLatitude() {
+        return latitude;
+    }
+
+    public static double getLongitude() {
+        return longitude;
+    }
+
+    public static void setLatitude(double latitude) {
+        MyApplication.latitude = latitude;
+    }
+
+    public static void setLongitude(double longitude) {
+        MyApplication.longitude = longitude;
+    }
+
+    public static void setMyLocationName(String myLocationName) {
+        MyLocationName = myLocationName;
     }
 }

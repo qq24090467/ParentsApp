@@ -51,6 +51,8 @@
     <string name="edit_style">编辑个性签名</string>
     <string name="edit_live_location">请选择居住地址</string>
     <string name="edit_home_location">请选择家庭住址</string>
+    <string name="edit_professor">请选择家庭住址</string>
+    <string name="confirm">确定</string>
     <string name="profile_zone">个人资料</string>
     <string name="my_favtor">我的收藏</string>
     <string name="add_daily">再写一篇</string>
@@ -59,4 +61,6 @@
     <string name="my_album">我的相册</string>
     <string name="add_dairy_photo">添加图片</string>
     <string name="edit_dairy">编辑家庭日记</string>
+    <string name="unlogin_msg">您还没有登陆，请先登录！</string>
+    <string name="category_selected">请选择文章分类</string>
 </resources>

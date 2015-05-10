@@ -75,11 +75,14 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
     private static final int DESC_REQUEST_CODE = 6;// 居住地
     private static final int SELFSTYLE_REQUEST_CODE = 7;// 家庭住址
     private static final int SEX_REQUEST_CODE = 8;// 家庭住址
+    private static final int JOB_REQUEST_CODE = 9;// 家庭住址
+
 
     private Bitmap bitmap;
     /* 头像名称 */
     private static final String PHOTO_FILE_NAME = "temp_photo.jpg";
     private File tempFile;
+    private int sex_flag=0;
 
     private Intent dataIntent = null;
     @Override
@@ -125,8 +128,10 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
         birthday_text.setText(JsonUtils.getValue(user_info_json,"birthday"));
         profile_setting_desc.setText(JsonUtils.getValue(user_info_json,"desc"));
         profile_setting_self_style.setText(JsonUtils.getValue(user_info_json,"self_style"));
+        live_location_text.setText(JsonUtils.getValue(user_info_json,"live_district"));
+        home_location_text.setText(JsonUtils.getValue(user_info_json,"home_district"));
 
-        int sex_flag=Integer.parseInt(JsonUtils.getValue(user_info_json,"sex"));
+        sex_flag=Integer.parseInt(JsonUtils.getValue(user_info_json,"sex"));
         if (sex_flag==1){
             sex_img.setImageResource(R.drawable.personal_male_selected);
         }else{
@@ -161,6 +166,7 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.profile_setting_sex:
                 Intent intent=new Intent(getApplicationContext(),ChangeSexActivity.class);
+                intent.putExtra("sex_flag",sex_flag);
                 startActivityForResult(intent,SEX_REQUEST_CODE);
                 break;
             case R.id.profile_setting_location:
@@ -179,11 +185,13 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
                 Intent intent4=new Intent(getApplicationContext(),EditSelfInfoActivity.class);
                 intent4.putExtra("title",getString(R.string.edit_desc));
                 intent4.putExtra("request_code",DESC_REQUEST_CODE);
+                intent4.putExtra("content",profile_setting_desc.getText().toString());
                 startActivityForResult(intent4,DESC_REQUEST_CODE);
                 break;
             case R.id.profile_setting_self_style:
                 Intent intent5=new Intent(getApplicationContext(),EditSelfInfoActivity.class);
                 intent5.putExtra("title",getString(R.string.edit_style));
+                intent5.putExtra("content",profile_setting_self_style.getText().toString());
                 intent5.putExtra("request_code",SELFSTYLE_REQUEST_CODE);
                 startActivityForResult(intent5,SELFSTYLE_REQUEST_CODE);
                 break;
@@ -191,6 +199,9 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
                 finish();
                 break;
             case R.id.profile_setting_profession:
+                Intent intent6=new Intent(getApplicationContext(),ProfessionActivity.class);
+                intent6.putExtra("request_code",JOB_REQUEST_CODE);
+                startActivityForResult(intent6,JOB_REQUEST_CODE);
                 break;
         }
     }
@@ -370,6 +381,7 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
         }else if (requestCode==LIVE_REQUEST_CODE){
               if (data!=null){
                   String live_location=data.getExtras().getString("location");
+                  live_location_text.setText(data.getExtras().getString("location_text"));
                   RequestParams params=new RequestParams();
                   params.put("live_district", live_location.substring(0, live_location.length() - 1));
                   update_info(params);
@@ -377,6 +389,7 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
         }else if(requestCode==HOME_REQUEST_CODE){
               if (data!=null){
                   String home_location=data.getExtras().getString("location");
+                  home_location_text.setText(data.getExtras().getString("location_text"));
                   RequestParams params=new RequestParams();
                   params.put("home_district",home_location.substring(0,home_location.length()-1));
                   update_info(params);
@@ -398,8 +411,23 @@ public class SelfInfoActivity extends Activity implements View.OnClickListener {
         }else if (requestCode==SEX_REQUEST_CODE){
             if (data!=null){
                 RequestParams params=new RequestParams();
-                params.put("sex",data.getExtras().getString("sex"));
+                int sex_flag=data.getExtras().getInt("sex");
+
+                params.put("sex",sex_flag);
                 update_info(params);
+
+                if (sex_flag==1){
+                    sex_img.setImageResource(R.drawable.personal_male_selected);
+                }else{
+                    sex_img.setImageResource(R.drawable.personal_female_selected);
+                }
+            }
+        }else if (requestCode==JOB_REQUEST_CODE){
+            if (data!=null){
+                RequestParams params=new RequestParams();
+                params.put("job",data.getExtras().getString("job"));
+                update_info(params);
+                profession_text.setText(data.getExtras().getString("job"));
             }
         }
 

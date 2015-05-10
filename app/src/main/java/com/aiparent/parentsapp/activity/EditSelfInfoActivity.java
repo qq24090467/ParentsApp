@@ -36,6 +36,7 @@ public class EditSelfInfoActivity extends Activity implements View.OnClickListen
 
         title_text=(TextView)findViewById(R.id.title_text);
         title_text.setText(getIntent().getExtras().getString("title"));
+        info_text.setText(getIntent().getExtras().getString("content"));
 
         back_btn.setOnClickListener(this);
         save_info.setOnClickListener(this);

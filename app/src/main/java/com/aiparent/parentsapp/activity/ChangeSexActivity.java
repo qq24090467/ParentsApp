@@ -38,7 +38,6 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
     private ImageView male_img,female_img=null;
     public int sex_flag=0;
     private static final int SEX_REQUEST_CODE = 8;// 家庭住址
-    private SharedPreferences shared;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,10 +56,16 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
         title_text=(TextView)findViewById(R.id.title_text);
         title_text.setText(R.string.sex_title);
 
-        shared=new UserInfoConfig(getApplicationContext()).GetConfig();
-        String user_info_json=shared.getString(SystemConstant.DETAIL_INFO,"");
-        Log.v("userinfo",user_info_json);
-        sex_flag=Integer.parseInt(JsonUtils.getValue(user_info_json,"sex"));
+
+        sex_flag=getIntent().getExtras().getInt("sex_flag");
+
+        if (sex_flag==1){
+            male_img.setImageResource(R.drawable.personal_male_selected);
+            female_img.setImageResource(R.drawable.personal_female_unselected);
+        }else{
+            female_img.setImageResource(R.drawable.personal_female_selected);
+            male_img.setImageResource(R.drawable.personal_male_unselected);
+        }
 
         back_btn.setOnClickListener(this);
         save_info.setOnClickListener(this);
@@ -74,7 +79,7 @@ public class ChangeSexActivity extends Activity implements View.OnClickListener{
         switch (v.getId()){
             case R.id.save_info:
                 Intent intent=new Intent();
-                intent.putExtra("sex",sex_flag+"");
+                intent.putExtra("sex",sex_flag);
                 setResult(SEX_REQUEST_CODE, intent);
                 finish();
                 break;

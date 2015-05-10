@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include layout="@layout/common_title_5"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/category_pullrefresh"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawableStart="@drawable/default_ptr_flip"
+        ptr:ptrDrawableEnd="@drawable/default_ptr_rotate"/>
+</LinearLayout>

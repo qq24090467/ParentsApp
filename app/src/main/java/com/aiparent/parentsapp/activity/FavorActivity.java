@@ -122,7 +122,9 @@ public class FavorActivity extends FragmentActivity implements View.OnClickListe
 
     private void tabSelected(int position){
         TabTitles[position].setTextColor(getResources().getColor(R.color.text_click_color));
+        TabTitles[position].setBackgroundResource(R.drawable.actionbar_tab_selected);
         TabTitles[old_clicked_flag].setTextColor(getResources().getColor(R.color.textcolor_80));
+        TabTitles[old_clicked_flag].setBackgroundColor(getResources().getColor(R.color.white));
         old_clicked_flag=position;
     }
 }

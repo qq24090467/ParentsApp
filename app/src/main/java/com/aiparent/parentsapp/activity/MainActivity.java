@@ -3,6 +3,7 @@ package com.aiparent.parentsapp.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -16,11 +17,18 @@ import android.widget.TabHost.OnTabChangeListener;
 
 import com.aiparent.parentsapp.R;
 import com.aiparent.parentsapp.adapter.MyFragmentAdapter;
+import com.aiparent.parentsapp.config.LoginInfoConfig;
+import com.aiparent.parentsapp.config.SystemConstant;
 import com.aiparent.parentsapp.fragment.FragmentIndex;
 import com.aiparent.parentsapp.fragment.Fragment2;
 import com.aiparent.parentsapp.fragment.Fragment3;
 import com.aiparent.parentsapp.fragment.FragmentProfile;
 import com.aiparent.parentsapp.fragment.Fragment5;
+import com.aiparent.parentsapp.impl.UserImpl;
+import com.aiparent.parentsapp.utill.NetWorkUtils;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.apache.http.Header;
 
 public class MainActivity extends FragmentActivity  {
 
@@ -35,6 +43,8 @@ public class MainActivity extends FragmentActivity  {
 
     private List<Fragment> list = new ArrayList<Fragment>();
     private ViewPager vp;
+
+    private SharedPreferences loginInfoConfig;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +53,9 @@ public class MainActivity extends FragmentActivity  {
         initView();
         initPage();
         listener();
+        if (NetWorkUtils.isNetConnection(getApplicationContext())){
+            autoLogin();
+        }
     }
 
     /**
@@ -119,7 +132,26 @@ public class MainActivity extends FragmentActivity  {
             }
         });
     }
+    //自动登陆
+    private void autoLogin(){
+        loginInfoConfig=new LoginInfoConfig(getApplicationContext()).GetConfig();
+        String username=loginInfoConfig.getString(SystemConstant.LOGIN_USER,"");
+        String password=loginInfoConfig.getString(SystemConstant.LOGIN_PASSWORD,"");
+        if (!"".equals(username)&&!"".equals(password)){
+            UserImpl user=new UserImpl();
+            user.Login(username,password,new AsyncHttpResponseHandler() {
+                @Override
+                public void onSuccess(int i, Header[] headers, byte[] bytes) {
 
+                }
+
+                @Override
+                public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+
+                }
+            });
+        }
+    }
 
 
 }

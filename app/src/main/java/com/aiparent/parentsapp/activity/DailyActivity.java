@@ -86,7 +86,7 @@ public class DailyActivity extends Activity implements View.OnClickListener {
                 addView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(DailyActivity.this,DairyEditActivity.class));
+                        startActivity(new Intent(DailyActivity.this,CategoryActivity.class));
                     }
                 });
                 return addView;

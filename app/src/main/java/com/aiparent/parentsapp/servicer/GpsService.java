@@ -45,7 +45,9 @@ public class GpsService extends Service implements AMapLocationListener {
                 desc = locBundle.getString("desc");
                 Log.d("我的位置是：", "desc = " + desc);
             }
-            MyApplication.setaMapLocation(aMapLocation);
+            MyApplication.setLatitude(geoLat);
+            MyApplication.setLongitude(geoLng);
+            MyApplication.setMyLocationName(desc);
         }
     }
 

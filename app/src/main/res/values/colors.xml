@@ -41,4 +41,22 @@
     <color name="txt_black2">#ff666666</color>
     <color name="alertdialog_line">#c6c6c6</color>
     <color name="per_orange">#ffeb6100</color>
-</resources>
+    <color name="default_text_night">#ff747474</color>
+    <color name="subscribe_item_text_color_pressed_night">#ff303030</color>
+    <color name="subscribe_item_selected_stroke_night">#ffbc494d</color>
+    <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="subscribe_item_drag_bg">#fff5f5f5</color>
+    <color name="subscribe_item_selected_bg">#ffffffff</color>
+    <color name="subscribe_item_selected_stroke">#ffcc3131</color>
+    <color name="subscribe_item_disabled_stroke">#ffd9d9d9</color>
+    <color name="subscribe_item_disabled_bg">#ffefefef</color>
+    <color name="subscribe_item_pressed_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_pressed_bg">#fff9f9f9</color>
+    <color name="subscribe_item_normal_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_normal_bg">#fff5f5f5</color>
+    <item name="subscribe_item_text_color_normal" type="color">@color/default_text</item>
+    <color name="default_text">#ff454545</color>
+    <color name="light_gray">#ffe7e8e9</color>
+    <color name="light_red">#ffff5151</color>
+
+    </resources>

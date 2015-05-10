@@ -13,6 +13,13 @@
         <item name="android:layout_marginRight">5.0dip</item>
         <item name="android:src">@drawable/ic_back</item>
     </style>
+    <style name="question_btn_style">
+        <item name="android:layout_width">25.0dip</item>
+        <item name="android:layout_height">25.0dip</item>
+        <item name="android:layout_marginLeft">20.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:src">@drawable/icon_question</item>
+    </style>
     <style name="TopTitle_Text">
         <item name="android:textSize">18.0sp</item>
         <item name="android:textStyle">normal</item>
